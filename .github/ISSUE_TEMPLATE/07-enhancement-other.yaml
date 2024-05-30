@@ -1,0 +1,58 @@
+name: '✨ Enhance Another Package'
+description: 'Request a change to another one of our packages (parser, utils, etc)'
+title: 'Enhancement: <a short description of my proposal>'
+labels:
+  - enhancement
+  - triage
+body:
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: Before You File a Proposal Please Confirm You Have Done The Following...
+      description: If any of these required steps are not taken, we may not be able to review your issue. Help us to help you!
+      options:
+        - label: I have [searched for related issues](https://github.com/santi020k/eslint-config-santi020k/issues?q=is%3Aissue+label%3A%22enhancement%3A+plugin+rule+option%22) and found none that match my proposal.
+          required: true
+        - label: I have searched the [current rule list](https://santi020k.me/rules/#rules) and found no rules that match my proposal.
+          required: true
+        - label: I have [read the FAQ](https://santi020k.me/linting/troubleshooting) and my problem is not listed.
+          required: true
+  - type: dropdown
+    id: package
+    attributes:
+      label: Relevant Package
+      description: Select the package against which you want to report the bug.
+      options:
+        - ast-spec
+        - parser
+        - rule-tester
+        - scope-manager
+        - type-utils
+        - types
+        - typescript-eslint
+        - typescript-estree
+        - utils
+        - visitor-keys
+        - website
+    validations:
+      required: true
+  - type: checkboxes
+    id: rule-fits-the-brief
+    attributes:
+      label: My proposal is suitable for this project
+      options:
+        - label: I believe my proposal would be useful to the broader TypeScript community (meaning it is not a niche proposal).
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Explain what your proposal would do and why this is useful.
+      placeholder: I propose that the foo rule should also check for when bars are force to be a baz.
+    validations:
+      required: true
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Info
+      description: Any additional info you'd like to provide.

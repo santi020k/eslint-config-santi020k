@@ -1,0 +1,32 @@
+name: '📝 Documentation'
+description: 'Adding or improving in docs'
+title: 'Docs: <a short description of my proposal>'
+labels:
+  - documentation
+  - triage
+body:
+  - type: checkboxes
+    id: preliminary-checks
+    attributes:
+      label: Before You File a Documentation Request Please Confirm You Have Done The Following...
+      options:
+        - label: I have looked for existing [open or closed documentation requests](https://github.com/santi020k/eslint-config-santi020k/issues?q=is%3Aissue+label%3Adocumentation) that match my proposal.
+          required: true
+        - label: I have [read the FAQ](https://santi020k.io/linting/troubleshooting) and my problem is not listed.
+          required: true
+  - type: markdown
+    attributes:
+      value: |
+        If your request is for help, not documentation, please ask on [StackOverflow](https://stackoverflow.com/questions/tagged/eslint)
+  - type: textarea
+    attributes:
+      label: Suggested Changes
+      description: What would you like to see happen in the docs?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Affected URL(s)
+      description: Which URL(s) on the website does this CRUD?
+    validations:
+      required: true

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "jsx": "react-jsx",
+    "emitDeclarationOnly": true,
+    "allowImportingTsExtensions": true,
+    "allowJs": true,
+    "checkJs": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "target": "ES2022",
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext"
+  }
+}

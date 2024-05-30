@@ -1,0 +1,50 @@
+{
+  // This matches the value configured on the autoformatter
+  "editor.rulers": [80],
+
+  // An array of language ids which should be validated by ESLint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  // required to make the extension pickup the flat config
+  "eslint.useFlatConfig": true,
+
+  // When enabled, will trim trailing whitespace when saving a file.
+  "files.trimTrailingWhitespace": true,
+
+  // typescript auto-format settings
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "javascript.preferences.importModuleSpecifier": "project-relative",
+  "typescript.preferences.importModuleSpecifier": "project-relative",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+
+  // make the .shot files from jest-specific-snapshot act like normal snapshots
+  "files.associations": {
+    "*.shot": "jest-snapshot"
+  },
+
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  }
+}

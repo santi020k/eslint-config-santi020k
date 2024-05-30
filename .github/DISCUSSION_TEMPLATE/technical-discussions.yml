@@ -1,0 +1,25 @@
+body:
+  - attributes:
+      label: Body
+      value: |
+        Body of the technical discussion...
+    id: body
+    type: textarea
+  - attributes:
+      label: Additional Info
+      value: |
+        Any additional info...
+    id: additional
+    type: textarea
+  - attributes:
+      label: Before you submit your discussion, please confirm the following. If any of these required steps are not taken, we may not be able to review your RFC. Help us to help you!
+      options:
+        - label: I have [read the discussions guidelines](https://santi020k.me/contributing/discussions) and per those guidelines, this fits a discussion category, _not_ a help request or standard issue.
+          required: true
+        - label: I have [searched for related discussions](https://github.com/santi020k/eslint-config-santi020k/discussions) and [searched for related issues](https://github.com/santi020k/santi020k/issues) and found none that match my proposal.
+          required: true
+        - label: I have [read the FAQ](https://santi020k.me/linting/troubleshooting) and my problem is not listed.
+          required: true
+    id: required-checks
+    type: checkboxes
+title: Your Title Here
