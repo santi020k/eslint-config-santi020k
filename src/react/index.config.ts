@@ -1,4 +1,6 @@
 // @ts-check
+import { jsConfig } from '../js/index.config.ts'
+
 import { rules } from './rules.ts'
 
 import { fixupConfigRules } from '@eslint/compat'
@@ -8,8 +10,6 @@ import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import pluginSonarjs from 'eslint-plugin-sonarjs'
 import globals from 'globals'
-
-import { jsConfig } from '../js/index.config.ts'
 
 const languageOptions = {
   ecmaVersion: 'latest',
@@ -36,7 +36,7 @@ const reactConfig = [
   {
     name: 'custom-react',
     plugins: {
-      'react-hooks': pluginReactHooks,
+      'react-hooks': pluginReactHooks
     },
     languageOptions,
     files: ['**/*.{js,jsx,mjs,cjs}'],

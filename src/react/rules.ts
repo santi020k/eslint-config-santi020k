@@ -1,5 +1,6 @@
+import { groups, rules as jsRules } from './../js/rules.ts'
+
 import { Linter } from '@typescript-eslint/utils/ts-eslint'
-import { rules as jsRules, groups } from './../js/rules.ts'
 
 const rules: Linter.RulesRecord = {
   ...jsRules,
@@ -44,7 +45,7 @@ const rules: Linter.RulesRecord = {
         ...groups
       ]
     }
-  ],
+  ]
 }
 
 export { rules }
