@@ -26,8 +26,8 @@ const reactConfig: FlatConfig.ConfigArray = [
     name: 'plugins',
     plugins: {
       n: pluginN,
-      import: pluginImport,
       promise: pluginPromise,
+      import: { rules: pluginImport.rules },
       'simple-import-sort': pluginSimpleImport,
       'jsx-a11y': pluginJsxA11y,
       'unused-imports': pluginUnusedImport,
@@ -46,7 +46,12 @@ const reactConfig: FlatConfig.ConfigArray = [
   },
   ...(fixupConfigRules(pluginReactConfig).map(react => ({
     ...react,
-    name: 'react'
+    name: 'react',
+    settings: {
+      react: {
+        version: 'detect'
+      }
+    }
   })) as FlatConfig.ConfigArray),
   {
     name: 'custom',
@@ -59,11 +64,6 @@ const reactConfig: FlatConfig.ConfigArray = [
       }
     },
     files: ['**/*.{js,jsx,mjs,cjs}'],
-    settings: {
-      react: {
-        version: 'detect'
-      }
-    },
     rules
   }
 ]
