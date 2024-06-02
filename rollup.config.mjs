@@ -22,7 +22,7 @@ export default {
     esbuild({
       minify: false
     }),
-    // @ts-ignore
+    // @ts-expect-error It seems that the library is not typed correctly.
     copy({
       targets: [
         { src: 'src/types.ts', dest: 'dist/cjs' },
