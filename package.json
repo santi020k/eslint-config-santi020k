@@ -19,11 +19,12 @@
     "/dist"
   ],
   "scripts": {
+    "dev": "rollup -c --watch",
     "build": "rollup -c",
     "lint": "eslint . --report-unused-disable-directives",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "npm run lint -- --fix --max-warnings=0",
     "pre-commit": "lint-staged",
-    "pre-push": "eslint . --fix --max-warnings=0 && npm run build",
+    "pre-push": "npm run lint:fix && npm run build",
     "prepare": "husky config/.husky",
     "test": "not yet"
   },
