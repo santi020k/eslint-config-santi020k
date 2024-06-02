@@ -1,8 +1,8 @@
 // @ts-check
-import { reactTsEslint } from './dist/esm/index.mjs'
+import { tsEslint } from './dist/esm/index.mjs'
 
 export default [
-  ...reactTsEslint,
+  ...tsEslint,
   {
     ignores: ['dist/*', 'node_modules/*']
   }

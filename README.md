@@ -33,6 +33,36 @@ Then, install the configuration package:
 
 ## Usage
 
+### For JavaScript Projects
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
+
+```js
+  import { jsEslint } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...jsEslint,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
+
+### For TypeScript Projects
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
+
+```js
+  import { tsConfig } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...tsConfig,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
+
 ### For JavaScript and React Projects
 
 Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
@@ -93,6 +123,12 @@ Here are some useful scripts you can add to your `package.json`:
     ```
 
 4. Adjust as Necessary: Review the linting rules and adjust them based on your project's needs. Since this configuration is opinionated, some rules might be too strict or not applicable to your project. Feel free to disable or modify them.
+
+## Future
+
+[ ] Unit testing
+[ ] Better documentation
+[ ] Additional Frameworks support
 
 ## Contributing
 
