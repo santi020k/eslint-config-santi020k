@@ -15,7 +15,8 @@ Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated E
 - [tsEslint](./src/ts/README.md): For TypeScript projects.
 - [reactEslint](./src/react/README.md): For JavaScript and React projects.
 - [reactTsEslint](./src/react-ts/README.md): For TypeScript and React projects.
-- NextJS: Pending
+- [nextEslint](./src/next/README.md): For JavaScript and Next projects.
+- [nextTsEslint](./src/next-ts/README.md): For TypeScript and Next projects.
 - Astro: Pending
 - NX: Pending
 
@@ -84,12 +85,41 @@ Create an `eslint.config.js` file (or use your existing one) and extend `@santi0
 
 Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
 
-
 ```js
-  import { reactTsConfig } from '@santi020k/eslint-config-santi020k'
+  import { reactTsEslint } from '@santi020k/eslint-config-santi020k'
 
   export default [
-    ...reactTsConfig,
+    ...reactTsEslint,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
+
+### For JavaScript and Next Projects
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
+
+```js
+  import { nextEslint } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...nextEslint,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
+
+### For TypeScript and Next Projects
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
+
+```js
+  import { nextTsEslint } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...nextTsEslint,
     {
       // Other rules or overrides
     }
