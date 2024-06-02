@@ -36,7 +36,8 @@ const reactConfig: FlatConfig.ConfigArray = [
     },
     rules: {
       ...configStandard.rules,
-      ...pluginSonarjs.configs.recommended.rules
+      ...pluginSonarjs.configs.recommended.rules,
+      'import/first': 0
     }
   },
   {
