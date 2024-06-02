@@ -11,6 +11,8 @@ Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated E
 
 ## Links to Configurations
 
+- [jsEslint](./src/js/README.md): For JavaScript projects.
+- [tsEslint](./src/ts/README.md): For TypeScript projects.
 - [reactEslint](./src/react/README.md): For JavaScript and React projects.
 - [reactTsEslint](./src/react-ts/README.md): For TypeScript and React projects.
 - NextJS: Pending
