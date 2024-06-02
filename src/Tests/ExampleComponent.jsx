@@ -1,3 +1,5 @@
+// This file is for manual testing
+/* eslint-disable */
 // example.js
 
 // This is an unused variable
@@ -13,23 +15,19 @@ function regularFunction() {
 }
 
 // Testing unused imports and sorting
-import { useContext } from 'react'
-import { useCallback } from 'react'
 
 // Incorrect quote style
-const doubleQuotes = "This should be single quotes"
+const doubleQuotes = 'This should be single quotes'
 
 // Testing simple import sort and unused imports
-import { useMemo } from 'react'
 import PropTypes from 'prop-types'
 
 // Incorrect indentation
-  const incorrectIndentation = true
-
+const incorrectIndentation = true
 // Testing no-void and prefer-arrow-callback
 const voidFunction = () => void console.log('No void operator allowed here')
 
-setTimeout(function() {
+setTimeout(() => {
   console.log('Prefer arrow callback')
 }, 1000)
 
@@ -40,6 +38,7 @@ const ternaryValue = value ? 'Value is true' : 'Value is false'
 // Testing padding lines and max line length
 function exampleFunction() {
   const message = 'This line is too long, it should be wrapped at 120 characters to meet the max-len rule set in the config'
+
   console.log(message)
 }
 
@@ -63,5 +62,5 @@ const ExampleComponent = () => {
 }
 
 ExampleComponent.propTypes = {
-  state: PropTypes.number,
+  state: PropTypes.number
 }

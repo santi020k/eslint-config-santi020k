@@ -17,6 +17,16 @@ import pluginSonarjs from 'eslint-plugin-sonarjs'
 import pluginUnusedImport from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 
+const languageOptions = {
+  ecmaVersion: 'latest',
+  sourceType: 'module',
+  ...pluginReactConfig.languageOptions,
+  globals: {
+    ...globals.browser,
+    ...globals.node
+  }
+}
+
 const reactConfig: FlatConfig.ConfigArray = [
   {
     name: 'eslint-config',
@@ -26,17 +36,19 @@ const reactConfig: FlatConfig.ConfigArray = [
     name: 'plugins',
     plugins: {
       n: pluginN,
-      import: pluginImport,
       promise: pluginPromise,
+      import: { rules: pluginImport.rules },
       'simple-import-sort': pluginSimpleImport,
       'jsx-a11y': pluginJsxA11y,
       'unused-imports': pluginUnusedImport,
       'react-rooks': pluginReactHooks,
       sonarjs: pluginSonarjs
     },
+    languageOptions,
     rules: {
       ...configStandard.rules,
-      ...pluginSonarjs.configs.recommended.rules
+      ...pluginSonarjs.configs.recommended.rules,
+      'import/first': 0
     }
   },
   {
@@ -46,24 +58,18 @@ const reactConfig: FlatConfig.ConfigArray = [
   },
   ...(fixupConfigRules(pluginReactConfig).map(react => ({
     ...react,
-    name: 'react'
-  })) as FlatConfig.ConfigArray),
-  {
-    name: 'custom',
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      ...pluginReactConfig.languageOptions,
-      globals: {
-        ...globals.browser
-      }
-    },
-    files: ['**/*.{js,jsx,mjs,cjs}'],
+    name: 'react',
+    languageOptions,
     settings: {
       react: {
         version: 'detect'
       }
-    },
+    }
+  })) as FlatConfig.ConfigArray),
+  {
+    name: 'custom',
+    languageOptions,
+    files: ['**/*.{js,jsx,mjs,cjs}'],
     rules
   }
 ]
