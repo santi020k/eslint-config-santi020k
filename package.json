@@ -100,8 +100,8 @@
     "eslint": "$eslint"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx,astro,md}": [
-      "eslint --fix"
+    "*.{js, jsx, ts, tsx, md}": [
+      "npm run lint:fix"
     ]
   },
   "config": {
