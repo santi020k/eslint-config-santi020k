@@ -17,6 +17,16 @@ import pluginSonarjs from 'eslint-plugin-sonarjs'
 import pluginUnusedImport from 'eslint-plugin-unused-imports'
 import globals from 'globals'
 
+const languageOptions = {
+  ecmaVersion: 'latest',
+  sourceType: 'module',
+  ...pluginReactConfig.languageOptions,
+  globals: {
+    ...globals.browser,
+    ...globals.node
+  }
+}
+
 const reactConfig: FlatConfig.ConfigArray = [
   {
     name: 'eslint-config',
@@ -34,6 +44,7 @@ const reactConfig: FlatConfig.ConfigArray = [
       'react-rooks': pluginReactHooks,
       sonarjs: pluginSonarjs
     },
+    languageOptions,
     rules: {
       ...configStandard.rules,
       ...pluginSonarjs.configs.recommended.rules,
@@ -48,6 +59,7 @@ const reactConfig: FlatConfig.ConfigArray = [
   ...(fixupConfigRules(pluginReactConfig).map(react => ({
     ...react,
     name: 'react',
+    languageOptions,
     settings: {
       react: {
         version: 'detect'
@@ -56,14 +68,7 @@ const reactConfig: FlatConfig.ConfigArray = [
   })) as FlatConfig.ConfigArray),
   {
     name: 'custom',
-    languageOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-      ...pluginReactConfig.languageOptions,
-      globals: {
-        ...globals.browser
-      }
-    },
+    languageOptions,
     files: ['**/*.{js,jsx,mjs,cjs}'],
     rules
   }
