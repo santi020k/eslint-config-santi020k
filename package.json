@@ -22,12 +22,9 @@
     "build": "rollup -c",
     "lint": "eslint . --report-unused-disable-directives",
     "lint:fix": "npm run lint -- --fix",
-    "prepare": "npm run build",
-    "release:generate:latest": "eslint-generate-release",
-    "release:generate:alpha": "eslint-generate-prerelease alpha",
-    "release:generate:beta": "eslint-generate-prerelease beta",
-    "release:generate:rc": "eslint-generate-prerelease rc",
-    "release:publish": "eslint-publish-release",
+    "pre-commit": "lint-staged",
+    "pre-push": "eslint . --fix --max-warnings=0 && npm run build",
+    "prepare": "husky config/.husky",
     "test": "not yet"
   },
   "repository": {
@@ -61,7 +58,10 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@types/node": "^20.12.13",
+    "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.21.4",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "rollup": "^4.18.0",
@@ -75,6 +75,8 @@
     "@eslint/js": "^9.3.0",
     "@stylistic/eslint-plugin": "^2.1.0",
     "@types/eslint__js": "^8.42.3",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/type-utils": "^7.11.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
@@ -86,9 +88,7 @@
     "eslint-plugin-sonarjs": "^1.0.3",
     "eslint-plugin-unused-imports": "^3.2.0",
     "globals": "^15.3.0",
-    "typescript-eslint": "^7.11.0",
-    "@typescript-eslint/eslint-plugin": "^7.11.0",
-    "@typescript-eslint/type-utils": "^7.11.0"
+    "typescript-eslint": "^7.11.0"
   },
   "overrides": {
     "eslint-config-standard": "$eslint-config-standard",
@@ -97,5 +97,15 @@
     "@typescript-eslint/eslint-plugin": "$@typescript-eslint/eslint-plugin",
     "@typescript-eslint/type-utils": "$@typescript-eslint/type-utils",
     "eslint": "$eslint"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,astro,md}": [
+      "eslint --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
