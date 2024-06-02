@@ -11,6 +11,8 @@ Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated E
 
 ## Links to Configurations
 
+- [jsEslint](./src/js/README.md): For JavaScript projects.
+- [tsEslint](./src/ts/README.md): For TypeScript projects.
 - [reactEslint](./src/react/README.md): For JavaScript and React projects.
 - [reactTsEslint](./src/react-ts/README.md): For TypeScript and React projects.
 - NextJS: Pending
@@ -32,6 +34,36 @@ Then, install the configuration package:
 ```
 
 ## Usage
+
+### For JavaScript Projects
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
+
+```js
+  import { jsEslint } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...jsEslint,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
+
+### For TypeScript Projects
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
+
+```js
+  import { tsConfig } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...tsConfig,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
 
 ### For JavaScript and React Projects
 
@@ -93,6 +125,12 @@ Here are some useful scripts you can add to your `package.json`:
     ```
 
 4. Adjust as Necessary: Review the linting rules and adjust them based on your project's needs. Since this configuration is opinionated, some rules might be too strict or not applicable to your project. Feel free to disable or modify them.
+
+## Future
+
+[ ] Unit testing
+[ ] Better documentation
+[ ] Additional Frameworks support
 
 ## Contributing
 

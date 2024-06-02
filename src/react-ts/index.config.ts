@@ -1,18 +1,9 @@
 import { reactConfig } from '../react/index.config.ts'
-
-import { rules } from './rules.ts'
-
-import tseslint from 'typescript-eslint'
+import { tsConfig } from '../ts/index.config.ts'
 
 const reactTsConfig = [
   ...reactConfig,
-  ...tseslint.configs.strict,
-  ...tseslint.configs.stylistic,
-  {
-    name: 'ts-custom',
-    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}'],
-    rules
-  }
+  ...tsConfig
 ]
 
 export { reactTsConfig }

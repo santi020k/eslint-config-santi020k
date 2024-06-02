@@ -1,24 +1,28 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
+// Define the structure of a Todo item
+interface Todo {
+  id: number
+  text: string
+  completed: boolean
+}
+
 // Helper function to simulate fetching data
-const fetchTodos = () => new Promise(resolve => {
+const fetchTodos = (): Promise<Todo[]> => new Promise(resolve => {
   setTimeout(() => {
     resolve([
       { id: 1, text: 'Learn React', completed: true },
-
-      {
-        id: 2, text: 'Build a Todo App', completed: false
-      },
+      { id: 2, text: 'Build a Todo App', completed: false },
       { id: 3, text: 'Profit!', completed: false }
     ])
   }, 1000)
 })
 
-const TodoApp = () => {
-  const [todos, setTodos] = useState([])
-  const [filter, setFilter] = useState('all')
-  const [sortOrder, setSortOrder] = useState('asc')
-  const inputRef = useRef()
+const TodoApp: React.FC = () => {
+  const [todos, setTodos] = useState<Todo[]>([])
+  const [filter, setFilter] = useState<string>('all')
+  const [sortOrder, setSortOrder] = useState<string>('asc')
+  const inputRef = useRef<React.HTMLInputElement>(null)
 
   // Fetch todos when the component mounts
   useEffect(() => {
@@ -33,7 +37,7 @@ const TodoApp = () => {
 
   // Handle adding a new todo
   const addTodo = useCallback(() => {
-    const text = inputRef.current.value.trim()
+    const text = inputRef.current?.value.trim()
 
     if (text) {
       setTodos(prevTodos => [
@@ -41,22 +45,24 @@ const TodoApp = () => {
         { id: Date.now(), text, completed: false }
       ])
 
-      inputRef.current.value = ''
+      if (inputRef.current) {
+        inputRef.current.value = ''
+      }
     }
   }, [])
 
   // Handle toggling the completion state of a todo
-  const toggleTodo = useCallback(id => {
-    setTodos(prevTodos => prevTodos.map(todo => (todo.id === id ? { ...todo, completed: !todo.completed } : todo)))
+  const toggleTodo = useCallback((id: number) => {
+    setTodos(prevTodos => prevTodos.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo))
   }, [])
 
   // Handle changing the filter state
-  const handleFilterChange = useCallback(event => {
+  const handleFilterChange = useCallback((event: React.ChangeEvent<React.HTMLSelectElement>) => {
     setFilter(event.target.value)
   }, [])
 
   // Handle changing the sort order
-  const handleSortChange = useCallback(event => {
+  const handleSortChange = useCallback((event: React.ChangeEvent<React.HTMLSelectElement>) => {
     setSortOrder(event.target.value)
   }, [])
 

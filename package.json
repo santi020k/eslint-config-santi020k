@@ -24,7 +24,7 @@
     "lint": "eslint . --report-unused-disable-directives",
     "lint:fix": "npm run lint -- --fix --max-warnings=0",
     "pre-commit": "lint-staged",
-    "pre-push": "npm run lint:fix && npm run build",
+    "pre-push": "npm run build && npm run lint:fix",
     "prepare": "husky config/.husky",
     "test": "not yet"
   },
