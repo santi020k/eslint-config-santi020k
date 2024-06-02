@@ -9,7 +9,7 @@ const tsConfig = [
   ...tseslint.configs.strict,
   ...tseslint.configs.stylistic,
   {
-    name: 'ts-custom',
+    name: 'custom-ts',
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}'],
     rules
   }
