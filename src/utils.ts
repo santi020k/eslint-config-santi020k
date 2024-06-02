@@ -1,4 +1,4 @@
-import { FlatCompat } from '@eslint/eslintrc' // Importing FlatCompat from @eslint/eslintrc
+import { FlatCompat } from '@eslint/eslintrc'
 import path from 'path' // Importing path module from Node.js
 import { fileURLToPath } from 'url' // Importing fileURLToPath function from url module
 
@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 // Initialize FlatCompat with the base directory and recommended configurations
-const compat = new FlatCompat({
+const flatCompat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: {}
 })
@@ -17,5 +17,5 @@ const compat = new FlatCompat({
  * Exporting the compat object for use in other modules
  */
 export {
-  compat
+  flatCompat
 }
