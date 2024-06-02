@@ -1,6 +1,6 @@
 {
   "name": "@santi020k/eslint-config-santi020k",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A comprehensive ESLint configuration package for JavaScript, TypeScript, and React projects, including popular plugins and custom rules for consistent coding style.",
   "type": "module",
   "main": "./dist/cjs/index.cjs",
@@ -32,7 +32,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/santi020k/eslint-config-santi020k"
+    "url": "git+https://github.com/santi020k/eslint-config-santi020k.git"
   },
   "bugs": {
     "url": "https://github.com/santi020k/eslint-config-santi020k/issues"
