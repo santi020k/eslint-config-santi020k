@@ -17,8 +17,8 @@ Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated E
 - [reactTsEslint](./src/react-ts/README.md): For TypeScript and React projects.
 - [nextEslint](./src/next/README.md): For JavaScript and Next projects.
 - [nextTsEslint](./src/next-ts/README.md): For TypeScript and Next projects.
-- Astro: Pending
-- NX: Pending
+- [astroEslint](./src/astro/README.md): For JavaScript and Astro projects. (Beta)
+- [astroTsEslint](./src/astro-ts/README.md): For TypeScript and Astro projects. (Beta)
 
 ## Installation
 
@@ -126,6 +126,40 @@ Create an `eslint.config.js` file (or use your existing one) and extend `@santi0
   ]
 ```
 
+### For JavaScript and Astro Projects
+
+(It is currently a beta implementation and only supports astro with react)
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
+
+```js
+  import { astroEslint } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...astroEslint,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
+
+### For TypeScript and Astro Projects
+
+(It is currently a beta implementation and only supports astro with react)
+
+Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
+
+```js
+  import { astroTsEslint } from '@santi020k/eslint-config-santi020k'
+
+  export default [
+    ...astroTsEslint,
+    {
+      // Other rules or overrides
+    }
+  ]
+```
+
 ## Opinionated but Flexible
 
 This ESLint configuration is based on my personal preferences and practices. As such, it may evolve over time. I recommend using a fixed version to avoid unexpected changes. If a rule is too strict, consider changing it from an error to a warning to allow for more flexibility during development.
@@ -182,6 +216,7 @@ I would like to express my gratitude to the developers and maintainers of the fo
 - `eslint-plugin-unused-imports`
 - `@stylistic/eslint-plugin`
 - `@typescript-eslint`
+- etc...
 
 These tools have significantly contributed to the JavaScript and TypeScript ecosystem, and their continued development helps maintain the high standards of code quality that we all strive for.
 
