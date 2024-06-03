@@ -1,3 +1,12 @@
+## [1.1.2](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.1...v1.1.2) (2024-06-03)
+
+
+### Bug Fixes
+
+* **publish.yml:** change node version publish action ([fd51cac](https://github.com/santi020k/eslint-config-santi020k/commit/fd51cacfa544168d1d63fc0919a1af32988c1d24))
+
+
+
 ## [1.1.1](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.0...v1.1.1) (2024-06-03)
 
 
