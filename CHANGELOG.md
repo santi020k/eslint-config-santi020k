@@ -1,3 +1,12 @@
+## [1.1.1](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.0...v1.1.1) (2024-06-03)
+
+
+### Bug Fixes
+
+* **publish.yml:** fix publish github action ([c965cb6](https://github.com/santi020k/eslint-config-santi020k/commit/c965cb62edb95291e950b92d5f725a58bdd95773))
+
+
+
 # [1.1.0](https://github.com/santi020k/eslint-config-santi020k/compare/v1.0.1...v1.1.0) (2024-06-03)
 
 
