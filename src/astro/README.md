@@ -23,10 +23,10 @@ To use this ESLint configuration in your project, create an .eslintrc.json file 
 eslint.config.js
 
 ```js
-import { astroConfig } from '@santi020k/eslint-config-santi020k'
+import { astroEslint } from '@santi020k/eslint-config-santi020k'
 
 export default [
-  ...astroConfig,
+  ...astroEslint,
   {
     // Other rules
   }

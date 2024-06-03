@@ -23,10 +23,10 @@ To use this ESLint configuration in your project, create an .eslintrc.json file 
 eslint.config.js
 
 ```js
-import { nextConfig } from '@santi020k/eslint-config-santi020k'
+import { nextEslint } from '@santi020k/eslint-config-santi020k'
 
 export default [
-  ...nextConfig,
+  ...nextEslint,
   {
     // Other rules
   }
