@@ -1,3 +1,13 @@
+## [1.1.3](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.2...v1.1.3) (2024-06-03)
+
+
+### Bug Fixes
+
+* **index.config.ts:** invert react and next order ([e493b26](https://github.com/santi020k/eslint-config-santi020k/commit/e493b2697f6a68fc92ec38e874e0b8ae43c39a38))
+* **readme.md:** fix readme explanation ([d4eba9b](https://github.com/santi020k/eslint-config-santi020k/commit/d4eba9b0b6b0d2251441da68ad107398faa11c88))
+
+
+
 ## [1.1.2](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.1...v1.1.2) (2024-06-03)
 
 
