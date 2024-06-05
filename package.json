@@ -94,6 +94,9 @@
     "globals": "^15.3.0",
     "typescript-eslint": "^7.11.0"
   },
+  "resolutions": {
+    "eslint": "$eslint"
+  },
   "overrides": {
     "eslint-config-standard": "$eslint-config-standard",
     "eslint-plugin-n": "$eslint-plugin-n",
