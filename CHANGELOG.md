@@ -1,3 +1,12 @@
+## [1.1.6](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.5...v1.1.6) (2024-06-06)
+
+
+### Bug Fixes
+
+* **package-lock.json:** pending update package-lock.json ([579e1ec](https://github.com/santi020k/eslint-config-santi020k/commit/579e1ec8212e4068701d57fcb48af4b7ebae7aa6))
+
+
+
 ## [1.1.5](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.4...v1.1.5) (2024-06-05)
 
 
@@ -32,15 +41,6 @@
 ### Bug Fixes
 
 * **publish.yml:** change node version publish action ([fd51cac](https://github.com/santi020k/eslint-config-santi020k/commit/fd51cacfa544168d1d63fc0919a1af32988c1d24))
-
-
-
-## [1.1.1](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.0...v1.1.1) (2024-06-03)
-
-
-### Bug Fixes
-
-* **publish.yml:** fix publish github action ([c965cb6](https://github.com/santi020k/eslint-config-santi020k/commit/c965cb62edb95291e950b92d5f725a58bdd95773))
 
 
 
