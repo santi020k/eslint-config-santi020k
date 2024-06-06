@@ -195,6 +195,7 @@ Here are some useful scripts you can add to your `package.json`:
 [ ] Unit testing
 [ ] Better documentation
 [ ] Additional Frameworks support
+[ ] Refactor rules structure (eslint configurations are currently duplicated)
 
 ## Contributing
 
