@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.0...v1.2.1) (2024-06-06)
+
+
+### Bug Fixes
+
+* **ts/*:** fix ts configurations overload ([fa7b10e](https://github.com/santi020k/eslint-config-santi020k/commit/fa7b10eb4e90c58f076ef1ef7ce019fa748b0340))
+
+
+
 # [1.2.0](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.7...v1.2.0) (2024-06-06)
 
 
@@ -37,15 +46,6 @@
 ### Bug Fixes
 
 * **package.json:** add resolution eslint ([0bd8c6f](https://github.com/santi020k/eslint-config-santi020k/commit/0bd8c6fc1714eb35a135f93547a575ac50aedbeb))
-
-
-
-## [1.1.4](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.3...v1.1.4) (2024-06-05)
-
-
-### Bug Fixes
-
-* **js/rules.ts:** change member delimiter requireLast ([e6b921c](https://github.com/santi020k/eslint-config-santi020k/commit/e6b921ced574a135c45489b1c19bbda9efb213a8))
 
 
 
