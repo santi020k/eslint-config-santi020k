@@ -43,7 +43,7 @@ const jsConfig: FlatConfig.ConfigArray = [
     rules: {
       ...configStandard.rules,
       ...pluginSonarJs.configs.recommended.rules,
-      'import/first': 0
+      'import/first': 'off'
     }
   },
   {

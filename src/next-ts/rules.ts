@@ -1,8 +1,8 @@
 import { groups } from '../js/rules.ts'
-import { rules as reactRules } from '../react/rules.ts'
+import { rules as reacTsRules } from '../react/rules.ts'
 
 const rules = {
-  ...reactRules,
+  ...reacTsRules,
   'simple-import-sort/imports': [
     'warn',
     {

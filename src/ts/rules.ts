@@ -2,7 +2,7 @@ import { rules as jsRules } from '../js/rules.ts'
 
 const rules = {
   ...jsRules,
-  '@typescript-eslint/indent': 0,
+  '@typescript-eslint/indent': 'off',
   '@typescript-eslint/no-unused-vars': [
     'warn',
     {
