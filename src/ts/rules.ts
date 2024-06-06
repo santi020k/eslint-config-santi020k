@@ -2,6 +2,8 @@ import { rules as jsRules } from '../js/rules.ts'
 
 const rules = {
   ...jsRules,
+  semi: 'off',
+  'no-unused-vars': 'off',
   '@typescript-eslint/indent': 'off',
   '@typescript-eslint/no-unused-vars': [
     'warn',
@@ -24,8 +26,7 @@ const rules = {
   '@typescript-eslint/no-dynamic-delete': 'warn',
   '@typescript-eslint/no-useless-constructor': 'warn',
   '@typescript-eslint/prefer-for-of': 'warn',
-  '@typescript-eslint/no-duplicate-enum-values': 'warn',
-  semi: 'off'
+  '@typescript-eslint/no-duplicate-enum-values': 'warn'
 }
 
 export { rules }
