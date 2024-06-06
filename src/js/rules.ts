@@ -24,6 +24,9 @@ const groups = [
 
 const rules: Linter.RulesRecord = {
   'unused-imports/no-unused-imports': 'warn',
+  indent: 'off',
+  'brace-style': 'off',
+  '@stylistic/brace-style': ['warn', '1tbs'],
   '@stylistic/indent': ['warn', 2],
   '@stylistic/quote-props': ['warn', 'as-needed'],
   quotes: 'off',
@@ -128,7 +131,6 @@ const rules: Linter.RulesRecord = {
   '@stylistic/implicit-arrow-linebreak': 'warn',
   'import/export': 'warn',
   'no-useless-escape': 'warn',
-  '@stylistic/brace-style': 'warn',
   'no-useless-return': 'warn',
   'prefer-promise-reject-errors': 'warn',
   'no-useless-constructor': 'warn',
