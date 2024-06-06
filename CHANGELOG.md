@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.7...v1.2.0) (2024-06-06)
+
+
+### Bug Fixes
+
+* **ts/rules.ts:** fix eslint error no-unused-vars ([f26495a](https://github.com/santi020k/eslint-config-santi020k/commit/f26495a8cb4cab99bac14eaa82b9c21a51722d59))
+
+
+### Features
+
+* **next/*:** add next and next-ts manual test files ([ae32a43](https://github.com/santi020k/eslint-config-santi020k/commit/ae32a43a4acf144e23cb836dc0dae697fc470e1c))
+
+
+
 ## [1.1.7](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.6...v1.1.7) (2024-06-06)
 
 
@@ -32,16 +46,6 @@
 ### Bug Fixes
 
 * **js/rules.ts:** change member delimiter requireLast ([e6b921c](https://github.com/santi020k/eslint-config-santi020k/commit/e6b921ced574a135c45489b1c19bbda9efb213a8))
-
-
-
-## [1.1.3](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.2...v1.1.3) (2024-06-03)
-
-
-### Bug Fixes
-
-* **index.config.ts:** invert react and next order ([e493b26](https://github.com/santi020k/eslint-config-santi020k/commit/e493b2697f6a68fc92ec38e874e0b8ae43c39a38))
-* **readme.md:** fix readme explanation ([d4eba9b](https://github.com/santi020k/eslint-config-santi020k/commit/d4eba9b0b6b0d2251441da68ad107398faa11c88))
 
 
 
