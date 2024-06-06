@@ -4,8 +4,8 @@ import { reactTsConfig } from '../react-ts/index.config.ts'
 import { rules } from './rules.ts'
 
 const nextTsConfig = [
-  ...reactTsConfig,
   ...nextConfig,
+  ...reactTsConfig,
   {
     name: 'custom-next-ts',
     rules
