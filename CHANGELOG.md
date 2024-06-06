@@ -1,3 +1,12 @@
+## [1.2.2](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.1...v1.2.2) (2024-06-06)
+
+
+### Bug Fixes
+
+* **js/rules.ts:** disable old rules for [@stylistic](https://github.com/stylistic) rules ([91f4ab0](https://github.com/santi020k/eslint-config-santi020k/commit/91f4ab0a7fad1a77ae4bbf2b3f04359e02bce2e0))
+
+
+
 ## [1.2.1](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.0...v1.2.1) (2024-06-06)
 
 
@@ -37,15 +46,6 @@
 ### Bug Fixes
 
 * **package-lock.json:** pending update package-lock.json ([579e1ec](https://github.com/santi020k/eslint-config-santi020k/commit/579e1ec8212e4068701d57fcb48af4b7ebae7aa6))
-
-
-
-## [1.1.5](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.4...v1.1.5) (2024-06-05)
-
-
-### Bug Fixes
-
-* **package.json:** add resolution eslint ([0bd8c6f](https://github.com/santi020k/eslint-config-santi020k/commit/0bd8c6fc1714eb35a135f93547a575ac50aedbeb))
 
 
 
