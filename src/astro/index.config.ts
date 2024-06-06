@@ -18,8 +18,8 @@ const astroConfig = [
         'mdx/language-mapper': {}
       },
       rules: {
-        'max-len': 0,
-        'react/react-in-jsx-scope': 0
+        'max-len': 'off',
+        'react/react-in-jsx-scope': 'off'
       }
     }]
   }))

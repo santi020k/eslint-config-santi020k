@@ -43,17 +43,17 @@ const rules: Linter.RulesRecord = {
   '@stylistic/member-delimiter-style': ['error', {
     multiline: {
       delimiter: 'none',
-      requireLast: true
+      requireLast: false
     },
     singleline: {
       delimiter: 'comma',
-      requireLast: true
+      requireLast: false
     },
     overrides: {
       interface: {
         multiline: {
           delimiter: 'none',
-          requireLast: true
+          requireLast: false
         }
       }
     }
@@ -134,7 +134,8 @@ const rules: Linter.RulesRecord = {
   'no-useless-constructor': 'warn',
   'no-new': 'warn',
   'prefer-regex-literals': 'warn',
-  '@stylistic/multiline-comment-style': 'off'
+  '@stylistic/multiline-comment-style': 'off',
+  'space-before-function-paren': 'off'
 }
 
 export { rules, groups }

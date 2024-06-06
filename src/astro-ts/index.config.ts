@@ -13,7 +13,7 @@ const astroTsConfig = [
       parser: 'astro-eslint-parser',
       plugins: ['@typescript-eslint'],
       rules: {
-        '@typescript-eslint/strict-boolean-expressions': 0
+        '@typescript-eslint/strict-boolean-expressions': 'off'
       }
     }]
   }))
