@@ -135,7 +135,7 @@ const rules: Linter.RulesRecord = {
   'no-new': 'warn',
   'prefer-regex-literals': 'warn',
   '@stylistic/multiline-comment-style': 'off',
-  'space-before-function-paren': ['warn', 'never']
+  'space-before-function-paren': 'off'
 }
 
 export { rules, groups }
