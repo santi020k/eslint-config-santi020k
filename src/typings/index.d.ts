@@ -15,3 +15,5 @@ declare module 'eslint-plugin-unused-imports'
 declare module 'path'
 
 declare module 'url'
+
+declare module 'eslint-plugin-tailwindcss'

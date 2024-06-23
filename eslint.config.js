@@ -2,7 +2,7 @@
 import { ConfigOptions, eslintConfig } from './dist/index.mjs'
 
 export default [
-  ...eslintConfig([ConfigOptions.Ts]),
+  ...eslintConfig({ config: [ConfigOptions.Ts] }),
   {
     name: 'custom-local',
     ignores: ['dist/*', 'node_modules/*']

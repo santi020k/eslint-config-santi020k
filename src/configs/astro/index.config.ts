@@ -1,5 +1,7 @@
 import { flatCompat } from '../../utils/flatCompat.ts'
 
+import { rules } from './rules'
+
 import { fixupConfigRules } from '@eslint/compat'
 
 const astroConfig = [
@@ -20,7 +22,11 @@ const astroConfig = [
         'react/react-in-jsx-scope': 'off'
       }
     }]
-  }))
+  })),
+  {
+    name: 'custom-astro',
+    rules
+  }
 ]
 
 export { astroConfig }
