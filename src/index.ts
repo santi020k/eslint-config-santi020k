@@ -49,4 +49,4 @@ const eslintConfig = ({ config, optionals }: EslintConfig): FlatConfig.ConfigArr
   ] as FlatConfig.ConfigArray
 }
 
-export { ConfigOptions, eslintConfig }
+export { ConfigOptions, eslintConfig, OptionalOptions }
