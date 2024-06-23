@@ -3,24 +3,19 @@
   "version": "1.2.0",
   "description": "A comprehensive ESLint configuration package for JavaScript, TypeScript, and React projects, including popular plugins and custom rules for consistent coding style.",
   "type": "module",
-  "main": "./dist/cjs/index.cjs",
-  "types": "./dist/cjs/index.d.cts",
-  "exports": {
-    "require": {
-      "types": "./dist/cjs/index.d.cts",
-      "default": "./dist/cjs/index.cjs"
-    },
-    "import": {
-      "types": "./dist/esm/index.d.mts",
-      "default": "./dist/esm/index.mjs"
-    }
-  },
+  "main": "./dist/index.js",
+  "exports": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
   "files": [
     "/dist"
   ],
   "scripts": {
-    "dev": "rollup -c --watch",
-    "build": "rollup -c",
+    "tsup": "tsup",
+    "tsc": "tsc",
+    "build:cts": "node -e \"fs.copyFileSync('dist/esm/index.d.ts', 'dist/cjs/index.d.cts')\"",
+    "build:clean": "rm -rf dist",
+    "build": "rollup --config rollup.config.js && rollup --config rollup.config.es.js",
+    "dev": "npm run tsup --watch src/index.ts",
     "lint": "eslint . --report-unused-disable-directives",
     "lint:fix": "npm run lint -- --fix --max-warnings=0",
     "pre-commit": "lint-staged",
@@ -58,7 +53,9 @@
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@types/eslint__eslintrc": "^2.1.1",
     "@types/node": "^20.14.2",
+    "@types/rollup-plugin-generate-package-json": "^3.2.9",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.21.4",
     "husky": "^9.0.11",
@@ -67,8 +64,11 @@
     "react-dom": "^18.3.1",
     "rollup": "^4.18.0",
     "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-esbuild": "^6.1.1",
+    "rollup-plugin-generate-package-json": "^3.2.0",
     "tslib": "^2.6.3",
+    "tsup": "^8.1.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {

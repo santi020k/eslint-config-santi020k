@@ -4,12 +4,29 @@
     "jsx": "react-jsx",
     "emitDeclarationOnly": true,
     "allowImportingTsExtensions": true,
+    "sourceMap": true,
+    "removeComments": false,
     "allowJs": true,
+    "alwaysStrict": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
     "checkJs": true,
     "resolveJsonModule": true,
-    "outDir": "dist",
-    "target": "ES2022",
-    "moduleResolution": "NodeNext",
-    "module": "NodeNext"
-  }
+    "outDir": "/",
+    "strict": true,
+    "target": "es2022",
+    "baseUrl": "./src",
+    "moduleResolution": "Bundler",
+    "module": "preserve",
+    "typeRoots": [
+      "./typings"
+    ],
+  },
+  "exclude": ["node_modules", "src/tests", "dist"],
+  "include": [
+    "src/**/*"
+  ]
 }

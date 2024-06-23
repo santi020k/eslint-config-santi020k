@@ -1,9 +1,10 @@
 // @ts-check
-import { tsEslint } from './dist/esm/index.mjs'
+import { ConfigOptions, eslintConfig } from './dist/index.mjs'
 
 export default [
-  ...tsEslint,
+  ...eslintConfig([ConfigOptions.Ts]),
   {
+    name: 'custom-local',
     ignores: ['dist/*', 'node_modules/*']
   }
 ]
