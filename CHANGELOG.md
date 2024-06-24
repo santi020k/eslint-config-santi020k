@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.0...v2.0.1) (2024-06-24)
+
+
+### Bug Fixes
+
+* **index.config.ts:** add ignore node_modules and .next ([4fba4ba](https://github.com/santi020k/eslint-config-santi020k/commit/4fba4ba8bf0e8f9f719e7842766782fd62f61b30))
+
+
+
 # [2.0.0](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.2...v2.0.0) (2024-06-24)
 
 
@@ -55,16 +64,6 @@
 ### Features
 
 * **next/*:** add next and next-ts manual test files ([ae32a43](https://github.com/santi020k/eslint-config-santi020k/commit/ae32a43a4acf144e23cb836dc0dae697fc470e1c))
-
-
-
-## [1.1.7](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.6...v1.1.7) (2024-06-06)
-
-
-### Bug Fixes
-
-* **js/rules.ts:** turn off old rule space-before-function-paren ([f9aabe2](https://github.com/santi020k/eslint-config-santi020k/commit/f9aabe2dae1edfadb7be2ff9fe2be787efb879ed))
-* **src/*:** fix rule overwrite order ([cf00b9b](https://github.com/santi020k/eslint-config-santi020k/commit/cf00b9b90e87c69c031556db500a82545084b6eb))
 
 
 
