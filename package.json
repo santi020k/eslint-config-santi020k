@@ -82,6 +82,7 @@
     "@stylistic/eslint-plugin": "^2.2.2",
     "@types/eslint__js": "^8.42.3",
     "@typescript-eslint/eslint-plugin": "^7.13.1",
+    "@typescript-eslint/parser": "^7.13.1",
     "@typescript-eslint/type-utils": "^7.13.1",
     "cross-dirname": "^0.1.0",
     "eslint-config-expo": "^7.1.2",
