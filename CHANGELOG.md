@@ -1,3 +1,14 @@
+# [2.1.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.1...v2.1.0) (2024-06-24)
+
+
+### Features
+
+* **astro:** improve astro with react support ([f99d78b](https://github.com/santi020k/eslint-config-santi020k/commit/f99d78b3fcece3b25b48d4524b67cb91c7b67b75))
+* **mdx.ts:** add Mdx optional support ([effeb66](https://github.com/santi020k/eslint-config-santi020k/commit/effeb66a71def64a7285a07158c4e96fdef1f10c))
+* **vitest.ts:** vitest add assert and should support for expect-expect rule ([0a771bb](https://github.com/santi020k/eslint-config-santi020k/commit/0a771bb2e6a0734277c665c2eb1e356a497f3ab0))
+
+
+
 ## [2.0.1](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.0...v2.0.1) (2024-06-24)
 
 
@@ -50,20 +61,6 @@
 ### Bug Fixes
 
 * **ts/*:** fix ts configurations overload ([fa7b10e](https://github.com/santi020k/eslint-config-santi020k/commit/fa7b10eb4e90c58f076ef1ef7ce019fa748b0340))
-
-
-
-# [1.2.0](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.7...v1.2.0) (2024-06-06)
-
-
-### Bug Fixes
-
-* **ts/rules.ts:** fix eslint error no-unused-vars ([f26495a](https://github.com/santi020k/eslint-config-santi020k/commit/f26495a8cb4cab99bac14eaa82b9c21a51722d59))
-
-
-### Features
-
-* **next/*:** add next and next-ts manual test files ([ae32a43](https://github.com/santi020k/eslint-config-santi020k/commit/ae32a43a4acf144e23cb836dc0dae697fc470e1c))
 
 
 
