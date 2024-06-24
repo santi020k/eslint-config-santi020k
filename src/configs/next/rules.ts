@@ -7,7 +7,7 @@ const rules = {
       groups: [
         // Packages `react` related packages come first.
         ['^react'],
-        ['^(next)(/.*|$)'],
+        ['^(next)(/.*|$)?'],
         ...groups
       ]
     }

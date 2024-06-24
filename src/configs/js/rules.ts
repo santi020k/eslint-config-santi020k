@@ -2,24 +2,35 @@ import { Linter } from '@typescript-eslint/utils/ts-eslint'
 
 const groups = [
   // Internal packages.
-  ['^(store)(/.*|$)'],
-  ['^(api)(/.*|$)'],
-  ['^(components)(/.*|$)'],
-  ['^(contexts)(/.*|$)'],
-  ['^(hooks)(/.*|$)'],
-  ['^(lib)(/.*|$)'],
-  ['^(services)(/.*|$)'],
-  ['^(models)(/.*|$)'],
-  ['^(utils)(/.*|$)'],
-  ['^(ws)(/.*|$)'],
+  // Atomic Design and components
+  ['^(components|@/components|@components)(/.*|$)'],
+  ['^(ui|@/ui|@ui)(/.*|$)'],
+  ['^(atoms|@/atoms|@atoms)(/.*|$)'],
+  ['^(molecules|@/molecules|@molecules)(/.*|$)'],
+  ['^(organisms|@/organisms|@organisms)(/.*|$)'],
+  ['^(templates|@/templates|@templates)(/.*|$)'],
+  ['^(pages|@/pages|@pages)(/.*|$)'],
+  // Other posible folders
+  ['^(store|@/store|@store)(/.*|$)'],
+  ['^(api|@/api|@api)(/.*|$)'],
+  ['^(contexts|@/contexts|@contexts)(/.*|$)'],
+  ['^(hooks|@/hooks|@hooks)(/.*|$)'],
+  ['^(lib|@/lib|@lib)(/.*|$)'],
+  ['^(services|@/services|@services)(/.*|$)'],
+  ['^(models|@/models|@models)(/.*|$)'],
+  ['^(utils|@/utils|@utils)(/.*|$)'],
+  ['^(ws|@/ws|@ws)(/.*|$)'],
+  // npm packages
+  // Anything that starts with a letter (or digit or underscore), or `@` followed by a letter.
+  ['^\\w'],
   // Side effect imports.
   ['^\\u0000'],
-  // Parent imports. Put `..` last.
-  ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
   // Other relative imports. Put same-folder imports and `.` last.
   ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+  // Parent imports. Put `..` last.
+  ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
   // Style imports.
-  ['^.+\\.?(css)$']
+  ['^.+\\.?(css|scss)$']
 ]
 
 const rules: Linter.RulesRecord = {
