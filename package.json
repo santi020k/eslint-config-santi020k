@@ -1,6 +1,6 @@
 {
   "name": "@santi020k/eslint-config-santi020k",
-  "version": "1.2.2",
+  "version": "2.0.0",
   "description": "A comprehensive ESLint configuration package for JavaScript, TypeScript, and React projects, including popular plugins and custom rules for consistent coding style.",
   "type": "module",
   "main": "./dist/index.js",
