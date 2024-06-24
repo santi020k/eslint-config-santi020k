@@ -1,3 +1,31 @@
+# [2.0.0](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.2...v2.0.0) (2024-06-24)
+
+
+### Bug Fixes
+
+* **src/index.ts:** export optional options enum ([a14385c](https://github.com/santi020k/eslint-config-santi020k/commit/a14385c1218e26e44363fa8c259bb6cf91db03fd))
+
+
+### Code Refactoring
+
+* **all:** breaking change new building system ([3e9d907](https://github.com/santi020k/eslint-config-santi020k/commit/3e9d9073b792486870cf2935dfefac81bf1c531e))
+* **src:** improve build, ts support and mny other changes ([b78f95a](https://github.com/santi020k/eslint-config-santi020k/commit/b78f95ae0e1b0e075dda54d5cc418467449e75ea))
+
+
+### Features
+
+* **all:** add optionals params and refactor config options ([dac3371](https://github.com/santi020k/eslint-config-santi020k/commit/dac3371fa4ad6595975299c813f20f95644bc2fc))
+* **rules.ts:** improved import grouping ([242a24d](https://github.com/santi020k/eslint-config-santi020k/commit/242a24db6c76a6ec5939f44fb04b969e8097256a))
+
+
+### BREAKING CHANGES
+
+* **src:** The build system changed, so several things may change, serious bug fixes
+* **all:** the way configuration parameters are passed change
+* **all:** Now the library is used in a different way and ts support has been improved
+
+
+
 ## [1.2.2](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.1...v1.2.2) (2024-06-06)
 
 
@@ -37,15 +65,6 @@
 
 * **js/rules.ts:** turn off old rule space-before-function-paren ([f9aabe2](https://github.com/santi020k/eslint-config-santi020k/commit/f9aabe2dae1edfadb7be2ff9fe2be787efb879ed))
 * **src/*:** fix rule overwrite order ([cf00b9b](https://github.com/santi020k/eslint-config-santi020k/commit/cf00b9b90e87c69c031556db500a82545084b6eb))
-
-
-
-## [1.1.6](https://github.com/santi020k/eslint-config-santi020k/compare/v1.1.5...v1.1.6) (2024-06-06)
-
-
-### Bug Fixes
-
-* **package-lock.json:** pending update package-lock.json ([579e1ec](https://github.com/santi020k/eslint-config-santi020k/commit/579e1ec8212e4068701d57fcb48af4b7ebae7aa6))
 
 
 
