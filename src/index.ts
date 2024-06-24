@@ -1,10 +1,52 @@
-import { astroConfig as astroEslint } from './astro/index.config.ts'
-import { astroTsConfig as astroTsEslint } from './astro-ts/index.config.ts'
-import { jsConfig as jsEslint } from './js/index.config.ts'
-import { nextConfig as nextEslint } from './next/index.config.ts'
-import { nextTsConfig as nextTsEslint } from './next-ts/index.config.ts'
-import { reactConfig as reactEslint } from './react/index.config.ts'
-import { reactTsConfig as reactTsEslint } from './react-ts/index.config.ts'
-import { tsConfig as tsEslint } from './ts/index.config.ts'
+import { astroConfig, expoConfig, jsConfig, nextConfig, reactConfig, tsConfig } from './configs'
+import { cspell, i18next, tailwind, vitest } from './optionals'
 
-export { jsEslint, tsEslint, reactEslint, reactTsEslint, nextEslint, nextTsEslint, astroEslint, astroTsEslint }
+import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
+
+enum ConfigOptions {
+  Ts = 'ts',
+  React = 'react',
+  Next = 'next',
+  Expo = 'expo',
+  Astro = 'astro'
+}
+
+enum OptionalOptions {
+  Cspell = 'cspell',
+  Tailwind = 'tailwind',
+  Vitest = 'vitest',
+  I18next = 'i18next'
+}
+
+const ReactConfigs = [
+  ConfigOptions.React,
+  ConfigOptions.Next,
+  ConfigOptions.Expo
+]
+
+interface EslintConfig {
+  config?: ConfigOptions[]
+  optionals?: OptionalOptions[]
+}
+
+// !important: The array order is important, the lower the more important
+const eslintConfig = ({ config, optionals }: EslintConfig = {}): FlatConfig.ConfigArray => {
+  const hasReact = ReactConfigs.some(reactConfig => config?.includes(reactConfig))
+
+  return [
+    // ConfigOptions
+    ...jsConfig,
+    ...(hasReact ? reactConfig : []),
+    ...(config?.includes(ConfigOptions.Ts) ? tsConfig : []),
+    ...(config?.includes(ConfigOptions.Next) ? nextConfig : []),
+    ...(config?.includes(ConfigOptions.Astro) ? astroConfig : []),
+    ...(config?.includes(ConfigOptions.Expo) ? expoConfig : []),
+    // OptionalOptions
+    ...(optionals?.includes(OptionalOptions.Cspell) ? cspell : []),
+    ...(optionals?.includes(OptionalOptions.Tailwind) ? tailwind : []),
+    ...(optionals?.includes(OptionalOptions.Vitest) ? vitest : []),
+    ...(optionals?.includes(OptionalOptions.I18next) ? i18next : [])
+  ] as FlatConfig.ConfigArray
+}
+
+export { ConfigOptions, eslintConfig, OptionalOptions }

@@ -1,24 +1,13 @@
 # @santi020k/eslint-config-santi020k
 
-Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated ESLint configuration package for JavaScript, TypeScript, and React projects. This repository was born out of my frustration with starting or working on projects that suffer from bad practices and poor quality code. By automating code quality and reducing the cognitive load during code reviews, this package aims to enforce a consistent coding style across your projects.
+Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated ESLint configuration package for JavaScript, TypeScript, React, and various other frameworks. This repository was born out of my frustration with projects that suffer from bad practices and poor code quality. By automating code quality and reducing cognitive load during code reviews, this package aims to enforce a consistent coding style across your projects.
 
 ## Why Use This Configuration?
 
-- Consistency: Enforces a uniform coding style, minimizing code differences and easing collaboration.
-- Quality: Promotes best practices and helps avoid common pitfalls in JavaScript, TypeScript, and React development.
-- Automation: Reduces the need for manual code reviews by catching issues early in the development process.
-- Customization: While opinionated, it can be tailored to fit your project's specific needs.
-
-## Links to Configurations
-
-- [jsEslint](./src/js/README.md): For JavaScript projects.
-- [tsEslint](./src/ts/README.md): For TypeScript projects.
-- [reactEslint](./src/react/README.md): For JavaScript and React projects.
-- [reactTsEslint](./src/react-ts/README.md): For TypeScript and React projects.
-- [nextEslint](./src/next/README.md): For JavaScript and Next projects.
-- [nextTsEslint](./src/next-ts/README.md): For TypeScript and Next projects.
-- [astroEslint](./src/astro/README.md): For JavaScript and Astro projects. (Beta)
-- [astroTsEslint](./src/astro-ts/README.md): For TypeScript and Astro projects. (Beta)
+- **Consistency**: Enforces a uniform coding style, minimizing code differences and easing collaboration.
+- **Quality**: Promotes best practices and helps avoid common pitfalls in JavaScript, TypeScript, and React development.
+- **Automation**: Reduces the need for manual code reviews by catching issues early in the development process.
+- **Customization**: While opinionated, it can be tailored to fit your project's specific needs.
 
 ## Installation
 
@@ -36,128 +25,108 @@ Then, install the configuration package:
 
 ## Usage
 
-### For JavaScript Projects
+Create an eslint.config.js file (or use your existing one) and extend @santi020k/eslint-config-santi020k based on your project type:
 
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
+### Basic Usage
+
+For a basic JavaScript project:
 
 ```js
-  import { jsEslint } from '@santi020k/eslint-config-santi020k'
+  import { eslintConfig } from './dist/index.mjs'
 
   export default [
-    ...jsEslint,
-    {
-      // Other rules or overrides
-    }
+    ...eslintConfig(),
+    // Your custom config
   ]
 ```
 
-### For TypeScript Projects
+### Advanced Usage
 
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
+For projects with specific configurations (TypeScript, React, Next.js, etc.), use the appropriate options:
 
 ```js
-  import { tsConfig } from '@santi020k/eslint-config-santi020k'
+  import { ConfigOptions, eslintConfig } from '@santi020k/eslint-config-santi020k';
 
+  // Examples of different configurations
+
+  // TypeScript project
   export default [
-    ...tsConfig,
-    {
-      // Other rules or overrides
-    }
-  ]
+    ...eslintConfig({ config: [ConfigOptions.Ts] }),
+    // Your custom config
+  ];
+
+  // React project
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.React] }),
+    // Your custom config
+  ];
+
+  // TypeScript and React project
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.React, ConfigOptions.Ts] }),
+    // Your custom config
+  ];
+
+  // Next.js project
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.Next] }),
+    // Your custom config
+  ];
+
+  // TypeScript and Next.js project
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.Next, ConfigOptions.Ts] }),
+    // Your custom config
+  ];
+
+  // Expo project (Beta)
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.Expo] }),
+    // Your custom config
+  ];
+
+  // TypeScript and Expo project (Beta)
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.Expo, ConfigOptions.Ts] }),
+    // Your custom config
+  ];
+
+  // Astro project (beta, supports Astro with React)
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.Astro] }),
+    // Your custom config
+  ];
+
+  // TypeScript and Astro project (beta, supports Astro with React)
+  export default [
+    ...eslintConfig({ config: [ConfigOptions.Astro, ConfigOptions.Ts] }),
+    // Your custom config
+  ];
 ```
 
-### For JavaScript and React Projects
+### Optionals Usage
 
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
-
-```js
-  import { reactEslint } from '@santi020k/eslint-config-santi020k'
-
-  export default [
-    ...reactEslint,
-    {
-      // Other rules or overrides
-    }
-  ]
-```
-
-### For TypeScript and React Projects
-
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
+Additionally, there are some optional parameters that add support to other technologies that could be needed in a front-end project. The idea is to add support for more options in the future. Here is an example of how to use these optionals:
 
 ```js
-  import { reactTsEslint } from '@santi020k/eslint-config-santi020k'
+  import { ConfigOptions, eslintConfig, OptionalOptions } from '@santi020k/eslint-config-santi020k';
 
   export default [
-    ...reactTsEslint,
-    {
-      // Other rules or overrides
-    }
-  ]
-```
-
-### For JavaScript and Next Projects
-
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
-
-```js
-  import { nextEslint } from '@santi020k/eslint-config-santi020k'
-
-  export default [
-    ...nextEslint,
-    {
-      // Other rules or overrides
-    }
-  ]
-```
-
-### For TypeScript and Next Projects
-
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
-
-```js
-  import { nextTsEslint } from '@santi020k/eslint-config-santi020k'
-
-  export default [
-    ...nextTsEslint,
-    {
-      // Other rules or overrides
-    }
-  ]
-```
-
-### For JavaScript and Astro Projects
-
-(It is currently a beta implementation and only supports astro with react)
-
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k`:
-
-```js
-  import { astroEslint } from '@santi020k/eslint-config-santi020k'
-
-  export default [
-    ...astroEslint,
-    {
-      // Other rules or overrides
-    }
-  ]
-```
-
-### For TypeScript and Astro Projects
-
-(It is currently a beta implementation and only supports astro with react)
-
-Create an `eslint.config.js` file (or use your existing one) and extend `@santi020k/eslint-config-santi020k` with TypeScript support:
-
-```js
-  import { astroTsEslint } from '@santi020k/eslint-config-santi020k'
-
-  export default [
-    ...astroTsEslint,
-    {
-      // Other rules or overrides
-    }
-  ]
+    ...eslintConfig({
+      config: [ConfigOptions.Next, ConfigOptions.Ts],
+      optionals: [
+        // Spell checker
+        OptionalOptions.Cspell,
+        // TailwindCss
+        OptionalOptions.Tailwind,
+        // Vitest and testing-library
+        OptionalOptions.Vitest,
+        // I18next
+        OptionalOptions.I18next
+      ]
+    }),
+    // Your custom config
+  ];
 ```
 
 ## Opinionated but Flexible
@@ -190,12 +159,15 @@ Here are some useful scripts you can add to your `package.json`:
 
 4. Adjust as Necessary: Review the linting rules and adjust them based on your project's needs. Since this configuration is opinionated, some rules might be too strict or not applicable to your project. Feel free to disable or modify them.
 
-## Future
+## Future Features
 
-[ ] Unit testing
-[ ] Better documentation
-[ ] Additional Frameworks support
-[ ] Refactor rules structure (eslint configurations are currently duplicated)
+- [ ] Unit testing
+- [ ] Better documentation
+- [ ] Additional Frameworks support
+  - [ ] Vue
+  - [ ] Angular
+  - [ ] Astro (Process)
+- [X] Refactor rules structure (eslint configurations are currently duplicated)
 
 ## Contributing
 
@@ -217,7 +189,10 @@ I would like to express my gratitude to the developers and maintainers of the fo
 - `eslint-plugin-unused-imports`
 - `@stylistic/eslint-plugin`
 - `@typescript-eslint`
-- etc...
+- `@cspell/eslint-plugin`
+- `eslint-plugin-tailwindcss`
+- `eslint-plugin-vitest`
+- `etc...`
 
 These tools have significantly contributed to the JavaScript and TypeScript ecosystem, and their continued development helps maintain the high standards of code quality that we all strive for.
 
