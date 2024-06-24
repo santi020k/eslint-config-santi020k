@@ -5,7 +5,18 @@ import pluginVitest from 'eslint-plugin-vitest'
 
 const vitest = [
   ...fixupConfigRules(flatCompat.extends('plugin:testing-library/react')),
-  pluginVitest.configs.recommended
+  pluginVitest.configs.recommended,
+  {
+    name: 'custom-vitest',
+    rules: {
+      'vitest/expect-expect': [
+        'error',
+        {
+          assertFunctionNames: ['expect', 'assert', 'should']
+        }
+      ]
+    }
+  }
 ]
 
 export { vitest }

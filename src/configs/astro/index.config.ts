@@ -1,29 +1,11 @@
-import { flatCompat } from '../../utils/flatCompat'
+import pluginAstro from 'eslint-plugin-astro'
 
 import { rules } from './rules'
 
-import { fixupConfigRules } from '@eslint/compat'
-
 const astroConfig = [
-  ...fixupConfigRules(flatCompat.config({
-    overrides: [{
-      files: ['*.astro'],
-      parser: 'astro-eslint-parser'
-    },
-    {
-      files: ['*.md', '*.mdx'],
-      extends: ['plugin:mdx/recommended'],
-      settings: {
-        'mdx/code-blocks': true,
-        'mdx/language-mapper': {}
-      },
-      rules: {
-        'max-len': 'off',
-        'react/react-in-jsx-scope': 'off'
-      }
-    }]
-  })),
+  ...pluginAstro.configs.recommended,
   {
+    files: ['**/*.astro'],
     name: 'custom-astro',
     rules
   }

@@ -1,13 +1,15 @@
-import mdx from 'eslint-plugin-mdx'
+import pluginMdx from 'eslint-plugin-mdx'
 
-export default [
+const mdx = [
   {
-    ...mdx.flat
+    ...pluginMdx.flat
   },
   {
-    ...mdx.flatCodeBlocks,
+    ...pluginMdx.flatCodeBlocks,
     rules: {
-      ...mdx.flatCodeBlocks.rules
+      ...pluginMdx.flatCodeBlocks.rules
     }
   }
 ]
+
+export { mdx }

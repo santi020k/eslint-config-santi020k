@@ -1,5 +1,5 @@
 import { astroConfig, expoConfig, jsConfig, nextConfig, reactConfig, tsConfig } from './configs'
-import { cspell, i18next, tailwind, vitest } from './optionals'
+import { cspell, i18next, mdx, tailwind, vitest } from './optionals'
 
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
@@ -15,11 +15,13 @@ enum OptionalOptions {
   Cspell = 'cspell',
   Tailwind = 'tailwind',
   Vitest = 'vitest',
-  I18next = 'i18next'
+  I18next = 'i18next',
+  Mdx = 'mdx'
 }
 
 const ReactConfigs = [
   ConfigOptions.React,
+  ConfigOptions.Astro,
   ConfigOptions.Next,
   ConfigOptions.Expo
 ]
@@ -45,7 +47,8 @@ const eslintConfig = ({ config, optionals }: EslintConfig = {}): FlatConfig.Conf
     ...(optionals?.includes(OptionalOptions.Cspell) ? cspell : []),
     ...(optionals?.includes(OptionalOptions.Tailwind) ? tailwind : []),
     ...(optionals?.includes(OptionalOptions.Vitest) ? vitest : []),
-    ...(optionals?.includes(OptionalOptions.I18next) ? i18next : [])
+    ...(optionals?.includes(OptionalOptions.I18next) ? i18next : []),
+    ...(optionals?.includes(OptionalOptions.Mdx) ? mdx : [])
   ] as FlatConfig.ConfigArray
 }
 
