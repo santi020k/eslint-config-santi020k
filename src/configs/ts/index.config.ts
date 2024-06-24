@@ -9,6 +9,10 @@ const tsConfig = [
     name: 'custom-ts',
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}'],
     rules
+  },
+  {
+    name: 'ignore-node-modules-ts',
+    ignores: ['node_modules/*']
   }
 ] as FlatConfig.Config[]
 
