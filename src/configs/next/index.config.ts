@@ -9,6 +9,10 @@ const nextConfig = [
   {
     name: 'custom-next',
     rules
+  },
+  {
+    name: 'ignore-next-folder',
+    ignores: ['.next/*']
   }
 ]
 
