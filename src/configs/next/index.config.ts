@@ -1,6 +1,6 @@
-import { flatCompat } from '../../utils/flatCompat.ts'
+import { flatCompat } from '../../utils/flatCompat'
 
-import { rules } from './rules.ts'
+import { rules } from './rules'
 
 import { fixupConfigRules } from '@eslint/compat'
 

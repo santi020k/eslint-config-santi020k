@@ -1,5 +1,5 @@
 // @ts-check
-import { rules } from './rules.ts'
+import { rules } from './rules'
 
 import eslint from '@eslint/js'
 import pluginStylistic from '@stylistic/eslint-plugin'
@@ -51,7 +51,7 @@ const jsConfig: FlatConfig.ConfigArray = [
     ...pluginStylistic.configs['recommended-flat']
   },
   {
-    name: 'custom',
+    name: 'custom-js',
     languageOptions,
     files: ['**/*.{js,jsx,mjs,cjs}'],
     rules

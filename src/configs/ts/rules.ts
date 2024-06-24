@@ -1,6 +1,7 @@
-import { rules as rulesJS } from './../js/rules.ts'
+import { rules as rulesJS } from './../js/rules'
 
 const rules = {
+  // ! js rules are not enabled in ts files, eslint rules would be duplicated, this can be improved in the future
   ...rulesJS,
   semi: 'off',
   'no-unused-vars': 'off',

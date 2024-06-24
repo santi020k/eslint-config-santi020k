@@ -1,15 +1,9 @@
 import { FlatCompat } from '@eslint/eslintrc'
-import path from 'path' // Importing path module from Node.js
-import { fileURLToPath } from 'url' // Importing fileURLToPath function from url module
-
-// Get the resolved path to the current file
-const __filename = fileURLToPath(import.meta.url)
-// Get the name of the directory containing the current file
-const __dirname = path.dirname(__filename)
+import { getDirname } from 'cross-dirname'
 
 // Initialize FlatCompat with the base directory and recommended configurations
 const flatCompat = new FlatCompat({
-  baseDirectory: __dirname,
+  baseDirectory: getDirname(),
   recommendedConfig: {}
 })
 

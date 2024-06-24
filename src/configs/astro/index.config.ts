@@ -1,4 +1,4 @@
-import { flatCompat } from '../../utils/flatCompat.ts'
+import { flatCompat } from '../../utils/flatCompat'
 
 import { rules } from './rules'
 

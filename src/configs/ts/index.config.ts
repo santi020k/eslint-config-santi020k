@@ -1,4 +1,4 @@
-import { rules } from './rules.ts'
+import { rules } from './rules'
 
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 import tsEslint from 'typescript-eslint'

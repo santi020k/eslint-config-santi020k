@@ -1,4 +1,4 @@
-import { groups } from '../js/rules.ts'
+import { groups } from '../js/rules'
 
 const rules = {
   'simple-import-sort/imports': [
@@ -7,7 +7,7 @@ const rules = {
       groups: [
         // Packages `react` related packages come first.
         ['^react'],
-        ['^expo'],
+        ['^(expo)(/.*|$)'],
         ...groups
       ]
     }

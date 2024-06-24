@@ -17,3 +17,5 @@ declare module 'path'
 declare module 'url'
 
 declare module 'eslint-plugin-tailwindcss'
+
+declare module 'cross-dirname'

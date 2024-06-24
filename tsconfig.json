@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
-    "declaration": true,
     "jsx": "react-jsx",
-    "emitDeclarationOnly": true,
-    "allowImportingTsExtensions": true,
     "sourceMap": true,
     "removeComments": false,
     "allowJs": true,
@@ -13,14 +10,13 @@
     "noImplicitReturns": true,
     "strictNullChecks": true,
     "strictFunctionTypes": true,
+    "esModuleInterop": true,
     "checkJs": true,
-    "resolveJsonModule": true,
-    "outDir": "/",
     "strict": true,
-    "target": "es2022",
     "baseUrl": "./src",
-    "moduleResolution": "Bundler",
-    "module": "preserve",
+    "moduleResolution": "bundler",
+    "module": "ESNext",
+    "lib": ["ES2023"],
     "typeRoots": [
       "./typings"
     ],

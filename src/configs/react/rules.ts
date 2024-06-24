@@ -1,4 +1,4 @@
-import { groups } from './../js/rules.ts'
+import { groups } from '../js/rules'
 
 import { Linter } from '@typescript-eslint/utils/ts-eslint'
 

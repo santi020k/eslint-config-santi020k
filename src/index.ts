@@ -1,5 +1,5 @@
 import { astroConfig, expoConfig, jsConfig, nextConfig, reactConfig, tsConfig } from './configs'
-import { cspell, tailwind, vitest } from './optionals'
+import { cspell, i18next, tailwind, vitest } from './optionals'
 
 import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 
@@ -30,7 +30,7 @@ interface EslintConfig {
 }
 
 // !important: The array order is important, the lower the more important
-const eslintConfig = ({ config, optionals }: EslintConfig): FlatConfig.ConfigArray => {
+const eslintConfig = ({ config, optionals }: EslintConfig = {}): FlatConfig.ConfigArray => {
   const hasReact = ReactConfigs.some(reactConfig => config?.includes(reactConfig))
 
   return [
@@ -44,8 +44,8 @@ const eslintConfig = ({ config, optionals }: EslintConfig): FlatConfig.ConfigArr
     // OptionalOptions
     ...(optionals?.includes(OptionalOptions.Cspell) ? cspell : []),
     ...(optionals?.includes(OptionalOptions.Tailwind) ? tailwind : []),
-    ...(optionals?.includes(OptionalOptions.Vitest) ? vitest : [])
-    // ...(optionals?.includes(OptionalOptions.I18next) ? i18next : [])
+    ...(optionals?.includes(OptionalOptions.Vitest) ? vitest : []),
+    ...(optionals?.includes(OptionalOptions.I18next) ? i18next : [])
   ] as FlatConfig.ConfigArray
 }
 
