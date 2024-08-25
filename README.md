@@ -11,7 +11,7 @@ Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated E
 
 ## Installation
 
-First, ensure you have ESLint (9.3.0) installed:
+First, ensure you have ESLint (9.0.0 or latest) installed:
 
 ```bash
   npm install eslint --save-dev
@@ -32,7 +32,7 @@ Create an eslint.config.js file (or use your existing one) and extend @santi020k
 For a basic JavaScript project:
 
 ```js
-  import { eslintConfig } from './dist/index.mjs'
+  import { eslintConfig } from '@santi020k/eslint-config-santi020k'
 
   export default [
     ...eslintConfig(),
