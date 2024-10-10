@@ -4,16 +4,30 @@
   "description": "A comprehensive ESLint configuration package for JavaScript, TypeScript, and React projects, including popular plugins and custom rules for consistent coding style.",
   "type": "module",
   "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./package.json": "./package.json",
+    "./*": {
+      "import": "./dist/*.js",
+      "types": "./dist/*.d.ts"
+    }
+  },
   "files": [
-    "/dist"
+    "dist",
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
-    "copy-package-json": "node ./scripts/copy-package-json.js",
-    "compile": "tsc -b ./tsconfig.json ./tsconfig.types.json",
-    "build:clean": "rm -rf ./dist",
-    "build": "npm run build:clean && tsc",
-    "dev": "tsc -w ./tsconfig.json",
+    "dev": "npm run build -- --watch ./src",
+    "build": "tsup src/index.ts --format esm --dts",
+    "build:dev": "tsup --watch",
+    "build:prod": "rm -rf ./dist && env NODE_ENV=production tsup",
+    "build:watch": "tsup --watch",
     "inspector": "npx @eslint/config-inspector@latest",
     "lint": "eslint . --report-unused-disable-directives",
     "lint:fix": "npm run lint -- --fix --max-warnings=0",
@@ -40,9 +54,6 @@
     "Santiago Molina <info@santi020k.me>"
   ],
   "license": "Apache License 2.0",
-  "peerDependencies": {
-    "eslint": "^9.0.0"
-  },
   "publishConfig": {
     "access": "public"
   },
@@ -52,47 +63,48 @@
   "devDependencies": {
     "@eslint/config-inspector": "^0.5.4",
     "@types/eslint__eslintrc": "^2.1.2",
-    "@types/node": "^22.5.5",
+    "@types/node": "^22.7.5",
     "cz-conventional-changelog": "^3.3.0",
-    "esbuild": "^0.23.1",
+    "esbuild": "^0.24.0",
     "husky": "^9.1.6",
     "lint-staged": "^15.2.10",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tslib": "^2.7.0",
-    "typescript": "^5.6.2",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3",
     "yalc": "^1.0.0-pre.53"
   },
   "dependencies": {
-    "@cspell/eslint-plugin": "^8.14.2",
-    "@eslint/compat": "^1.1.1",
-    "@eslint/js": "^9.10.0",
-    "@next/eslint-plugin-next": "^14.2.11",
-    "@stylistic/eslint-plugin": "^2.8.0",
+    "eslint": "^9.12.0",
+    "@cspell/eslint-plugin": "^8.14.4",
+    "@eslint/compat": "^1.2.0",
+    "@eslint/js": "^9.12.0",
+    "@next/eslint-plugin-next": "^14.2.15",
+    "@stylistic/eslint-plugin": "^2.9.0",
     "@types/eslint__js": "^8.42.3",
-    "@typescript-eslint/eslint-plugin": "^8.6.0",
-    "@typescript-eslint/parser": "^8.6.0",
-    "@typescript-eslint/type-utils": "^8.6.0",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/type-utils": "^8.8.1",
     "cross-dirname": "^0.1.0",
     "eslint-config-expo": "^7.1.2",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-astro": "^1.2.4",
     "eslint-plugin-i18next": "^6.1.0",
-    "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-mdx": "^3.1.5",
-    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-n": "^17.11.1",
     "eslint-plugin-promise": "^7.1.0",
-    "eslint-plugin-react": "^7.36.1",
+    "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.1",
-    "eslint-plugin-sonarjs": "^2.0.2",
-    "eslint-plugin-tailwindcss": "^3.17.4",
+    "eslint-plugin-sonarjs": "^2.0.3",
+    "eslint-plugin-tailwindcss": "^3.17.5",
     "eslint-plugin-testing-library": "^6.3.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "eslint-plugin-vitest": "^0.5.4",
-    "globals": "^15.9.0",
-    "typescript-eslint": "^8.6.0"
+    "globals": "^15.11.0",
+    "typescript-eslint": "^8.8.1"
   },
   "overrides": {
     "eslint-config-standard": "$eslint-config-standard",
