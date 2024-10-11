@@ -1,3 +1,17 @@
+# [3.0.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.1.0...v3.0.0) (2024-10-11)
+
+
+### Build System
+
+* **all:** i changed the entire build system to one more optimized for this library ([121587f](https://github.com/santi020k/eslint-config-santi020k/commit/121587f68128c02c1889b1403c3df19127453e98))
+
+
+### BREAKING CHANGES
+
+* **all:** Some import names have been changed and commonjs support has been removed
+
+
+
 # [2.1.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.1...v2.1.0) (2024-06-24)
 
 
@@ -52,15 +66,6 @@
 ### Bug Fixes
 
 * **js/rules.ts:** disable old rules for [@stylistic](https://github.com/stylistic) rules ([91f4ab0](https://github.com/santi020k/eslint-config-santi020k/commit/91f4ab0a7fad1a77ae4bbf2b3f04359e02bce2e0))
-
-
-
-## [1.2.1](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.0...v1.2.1) (2024-06-06)
-
-
-### Bug Fixes
-
-* **ts/*:** fix ts configurations overload ([fa7b10e](https://github.com/santi020k/eslint-config-santi020k/commit/fa7b10eb4e90c58f076ef1ef7ce019fa748b0340))
 
 
 
