@@ -1,11 +1,11 @@
-export { astroConfig } from './astro/index.config'
+export { astroConfig } from './astro/index.config.ts'
 
-export { jsConfig } from './js/index.config'
+export { jsConfig } from './js/index.config.ts'
 
-export { nextConfig } from './next/index.config'
+export { nextConfig } from './next/index.config.ts'
 
-export { reactConfig } from './react/index.config'
+export { reactConfig } from './react/index.config.ts'
 
-export { tsConfig } from './ts/index.config'
+export { tsConfig } from './ts/index.config.ts'
 
-export { expoConfig } from './expo/index.config'
+export { expoConfig } from './expo/index.config.ts'

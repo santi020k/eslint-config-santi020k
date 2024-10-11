@@ -1,4 +1,4 @@
-import { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 
 const groups = [
   // Internal packages.
@@ -33,7 +33,7 @@ const groups = [
   ['^.+\\.?(css|scss)$']
 ]
 
-const rules: Linter.RulesRecord = {
+const rules: TSESLint.Linter.RulesRecord = {
   'unused-imports/no-unused-imports': 'warn',
   indent: 'off',
   'brace-style': 'off',

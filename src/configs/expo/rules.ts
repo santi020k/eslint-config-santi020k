@@ -1,4 +1,4 @@
-import { groups } from '../js/rules'
+import { groups } from 'configs/js/rules.ts'
 
 const rules = {
   'simple-import-sort/imports': [

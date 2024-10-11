@@ -1,14 +1,15 @@
-import { rules } from './rules'
+import tsEslint from 'typescript-eslint'
+
+import { rules } from './rules.ts'
 
 import tsParser from '@typescript-eslint/parser'
-import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
-import tsEslint from 'typescript-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 
 const tsConfig = [
   ...tsEslint.configs.stylistic,
   {
     name: 'custom-ts',
-    files: ['**/*.{js,jsx,mjs,cjs,ts,tsx,mts,cts}'],
+    files: ['**/*.{ts,tsx,mts,cts}'],
     rules,
     languageOptions: {
       parserOptions: {
@@ -16,11 +17,12 @@ const tsConfig = [
       },
       ecmaVersion: 'latest'
     }
-  },
-  {
-    name: 'ignore-node-modules-ts',
-    ignores: ['node_modules/*']
   }
-] as FlatConfig.Config[]
+  // TODO: Temporal
+  // {
+  //   name: 'ignore-node-modules-ts',
+  //   ignores: ['node_modules/*']
+  // }
+] as TSESLint.FlatConfig.Config[]
 
 export { tsConfig }

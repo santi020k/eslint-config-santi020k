@@ -1,8 +1,8 @@
-import { cspell } from './cspell'
-import { i18next } from './i18next'
-import { mdx } from './mdx'
-import { tailwind } from './tailwind'
-import { vitest } from './vitest'
+import { cspell } from './cspell.ts'
+import { i18next } from './i18next.ts'
+import { mdx } from './mdx.ts'
+import { tailwind } from './tailwind.ts'
+import { vitest } from './vitest.ts'
 
 export {
   cspell,
