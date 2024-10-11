@@ -1,8 +1,8 @@
-import { groups } from '../js/rules'
+import { groups } from 'configs/js/rules.ts'
 
-import { Linter } from '@typescript-eslint/utils/ts-eslint'
+import type { TSESLint } from '@typescript-eslint/utils'
 
-const rules: Linter.RulesRecord = {
+const rules: TSESLint.Linter.RulesRecord = {
   'react/react-in-jsx-scope': 'off',
   'react/jsx-max-depth': ['warn', { max: 7 }],
   'react/prop-types': 'off',

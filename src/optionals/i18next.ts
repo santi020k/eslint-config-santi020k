@@ -1,4 +1,4 @@
-import { flatCompat } from '../utils/flatCompat'
+import { flatCompat } from 'src/utils/flat-compat.ts'
 
 import { fixupConfigRules } from '@eslint/compat'
 

@@ -1,28 +1,28 @@
 {
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "sourceMap": true,
-    "removeComments": false,
-    "allowJs": true,
-    "alwaysStrict": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "esModuleInterop": true,
-    "checkJs": true,
-    "strict": true,
-    "baseUrl": "./src",
-    "moduleResolution": "bundler",
-    "module": "ESNext",
-    "lib": ["ES2023"],
-    "typeRoots": [
-      "./typings"
-    ],
+    "target": "ES2022",                      // ECMAScript version targeting ES2022 or later
+    "module": "Node16",                      // Output as ECMAScript modules
+    "lib": ["ES2023"],                       // Use ES2023 features
+    "outDir": "./dist",                      // Output directory for compiled files
+    "declaration": true,                     // Generate declaration files (.d.ts)
+    "moduleResolution": "Node16",            // Resolve modules in Node.js style
+    "esModuleInterop": false,                 // Compatibility with CommonJS modules
+    "skipLibCheck": true,                    // Skip type checks for libraries
+    "forceConsistentCasingInFileNames": true,// Ensure file name casing consistency
+    "strict": true,                          // Enable strict type checking
+    "allowSyntheticDefaultImports": true,    // Support default imports for CommonJS modules
+    "isolatedModules": true,                 // Ensure that each file can be treated as a module
+    "resolveJsonModule": true,               // Allows importing JSON files as modules
+    "noEmit": true,                         // Emit output files (disable when using ESLint as a utility)
+    "paths": {                               // Aliases
+      "src/*": ["./src/*"],
+      "configs/*": ["./src/configs/*"],
+      "optionals/*": ["./src/optionals/*"],
+      "utils/*": ["./src/utils/*"],
+      "playground/*": ["./src/playground/*"]
+    },
+    "allowImportingTsExtensions": true
   },
-  "exclude": ["node_modules", "src/tests", "dist"],
-  "include": [
-    "src/**/*"
-  ]
+  "include": ["src/**/*.ts"],                // Files to include in the compilation process
+  "exclude": ["node_modules", "**/*.test.ts"]// Exclude test files or other unwanted files
 }

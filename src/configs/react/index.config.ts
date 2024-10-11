@@ -1,11 +1,12 @@
 // @ts-check
-import { rules } from './rules'
-
-import { fixupConfigRules } from '@eslint/compat'
-import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
 import pluginReactConfig from 'eslint-plugin-react/configs/recommended.js'
 import pluginReactHooks from 'eslint-plugin-react-hooks'
 import globals from 'globals'
+
+import { rules } from './rules.ts'
+
+import { fixupConfigRules } from '@eslint/compat'
+import type { TSESLint } from '@typescript-eslint/utils'
 
 const languageOptions = {
   ecmaVersion: 'latest',
@@ -27,7 +28,7 @@ const reactConfig = [
         version: 'detect'
       }
     }
-  })) as FlatConfig.ConfigArray),
+  })) as TSESLint.FlatConfig.ConfigArray),
   {
     name: 'custom-react',
     plugins: {

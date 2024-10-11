@@ -11,7 +11,7 @@ Welcome to @santi020k/eslint-config-santi020k, a comprehensive and opinionated E
 
 ## Installation
 
-First, ensure you have ESLint (9.3.0) installed:
+First, ensure you have ESLint (9.0.0 or latest) installed:
 
 ```bash
   npm install eslint --save-dev
@@ -32,7 +32,7 @@ Create an eslint.config.js file (or use your existing one) and extend @santi020k
 For a basic JavaScript project:
 
 ```js
-  import { eslintConfig } from './dist/index.mjs'
+  import { eslintConfig } from '@santi020k/eslint-config-santi020k'
 
   export default [
     ...eslintConfig(),
@@ -45,61 +45,61 @@ For a basic JavaScript project:
 For projects with specific configurations (TypeScript, React, Next.js, etc.), use the appropriate options:
 
 ```js
-  import { ConfigOptions, eslintConfig } from '@santi020k/eslint-config-santi020k';
+  import { ConfigOption, eslintConfig } from '@santi020k/eslint-config-santi020k';
 
   // Examples of different configurations
 
   // TypeScript project
   export default [
-    ...eslintConfig({ config: [ConfigOptions.Ts] }),
+    ...eslintConfig({ config: [ConfigOption.Ts] }),
     // Your custom config
   ];
 
   // React project
   export default [
-    ...eslintConfig({ config: [ConfigOptions.React] }),
+    ...eslintConfig({ config: [ConfigOption.React] }),
     // Your custom config
   ];
 
   // TypeScript and React project
   export default [
-    ...eslintConfig({ config: [ConfigOptions.React, ConfigOptions.Ts] }),
+    ...eslintConfig({ config: [ConfigOption.React, ConfigOption.Ts] }),
     // Your custom config
   ];
 
   // Next.js project
   export default [
-    ...eslintConfig({ config: [ConfigOptions.Next] }),
+    ...eslintConfig({ config: [ConfigOption.Next] }),
     // Your custom config
   ];
 
   // TypeScript and Next.js project
   export default [
-    ...eslintConfig({ config: [ConfigOptions.Next, ConfigOptions.Ts] }),
+    ...eslintConfig({ config: [ConfigOption.Next, ConfigOption.Ts] }),
     // Your custom config
   ];
 
   // Expo project (Beta)
   export default [
-    ...eslintConfig({ config: [ConfigOptions.Expo] }),
+    ...eslintConfig({ config: [ConfigOption.Expo] }),
     // Your custom config
   ];
 
   // TypeScript and Expo project (Beta)
   export default [
-    ...eslintConfig({ config: [ConfigOptions.Expo, ConfigOptions.Ts] }),
+    ...eslintConfig({ config: [ConfigOption.Expo, ConfigOption.Ts] }),
     // Your custom config
   ];
 
   // Astro project (beta, supports Astro with React)
   export default [
-    ...eslintConfig({ config: [ConfigOptions.Astro] }),
+    ...eslintConfig({ config: [ConfigOption.Astro] }),
     // Your custom config
   ];
 
   // TypeScript and Astro project (beta, supports Astro with React)
   export default [
-    ...eslintConfig({ config: [ConfigOptions.Astro, ConfigOptions.Ts] }),
+    ...eslintConfig({ config: [ConfigOption.Astro, ConfigOption.Ts] }),
     // Your custom config
   ];
 ```
@@ -109,20 +109,20 @@ For projects with specific configurations (TypeScript, React, Next.js, etc.), us
 Additionally, there are some optional parameters that add support to other technologies that could be needed in a front-end project. The idea is to add support for more options in the future. Here is an example of how to use these optionals:
 
 ```js
-  import { ConfigOptions, eslintConfig, OptionalOptions } from '@santi020k/eslint-config-santi020k';
+  import { ConfigOption, eslintConfig, OptionalOption } from '@santi020k/eslint-config-santi020k';
 
   export default [
     ...eslintConfig({
-      config: [ConfigOptions.Next, ConfigOptions.Ts],
+      config: [ConfigOption.Next, ConfigOption.Ts],
       optionals: [
         // Spell checker
-        OptionalOptions.Cspell,
+        OptionalOption.Cspell,
         // TailwindCss
-        OptionalOptions.Tailwind,
+        OptionalOption.Tailwind,
         // Vitest and testing-library
-        OptionalOptions.Vitest,
+        OptionalOption.Vitest,
         // I18next
-        OptionalOptions.I18next
+        OptionalOption.I18next
       ]
     }),
     // Your custom config

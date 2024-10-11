@@ -1,9 +1,13 @@
-import { astroConfig, expoConfig, jsConfig, nextConfig, reactConfig, tsConfig } from './configs'
-import { cspell, i18next, mdx, tailwind, vitest } from './optionals'
+import { applyConfigIfOptionPresent } from 'utils/apply-config-if-option-present.ts'
+import { hasReactConfig } from 'utils/has-react-config.ts'
 
-import type { FlatConfig } from '@typescript-eslint/utils/ts-eslint'
+import { astroConfig, expoConfig, jsConfig, nextConfig, reactConfig, tsConfig } from 'configs/index.ts'
+import { cspell, i18next, mdx, tailwind, vitest } from 'optionals/index.ts'
 
-enum ConfigOptions {
+import type { TSESLint } from '@typescript-eslint/utils'
+
+// Enum to define configuration options
+enum ConfigOption {
   Ts = 'ts',
   React = 'react',
   Next = 'next',
@@ -11,7 +15,8 @@ enum ConfigOptions {
   Astro = 'astro'
 }
 
-enum OptionalOptions {
+// Enum to define optional features
+enum OptionalOption {
   Cspell = 'cspell',
   Tailwind = 'tailwind',
   Vitest = 'vitest',
@@ -19,37 +24,40 @@ enum OptionalOptions {
   Mdx = 'mdx'
 }
 
-const ReactConfigs = [
-  ConfigOptions.React,
-  ConfigOptions.Astro,
-  ConfigOptions.Next,
-  ConfigOptions.Expo
+// Array of configurations that involve React
+export const ReactConfigs: ConfigOption[] = [
+  ConfigOption.React,
+  ConfigOption.Astro,
+  ConfigOption.Next,
+  ConfigOption.Expo
 ]
 
+// Interface to define ESLint configuration structure
 interface EslintConfig {
-  config?: ConfigOptions[]
-  optionals?: OptionalOptions[]
+  config?: ConfigOption[]
+  optionals?: OptionalOption[]
 }
 
-// !important: The array order is important, the lower the more important
-const eslintConfig = ({ config, optionals }: EslintConfig = {}): FlatConfig.ConfigArray => {
-  const hasReact = ReactConfigs.some(reactConfig => config?.includes(reactConfig))
+/**
+ * Main function to generate ESLint configuration array.
+ * !important: The array order is important, the lower the more important
+ */
+const eslintConfig = ({ config = [], optionals = [] }: EslintConfig = {}): TSESLint.FlatConfig.ConfigArray => {
+  const hasReact = hasReactConfig(config)
 
   return [
-    // ConfigOptions
     ...jsConfig,
     ...(hasReact ? reactConfig : []),
-    ...(config?.includes(ConfigOptions.Ts) ? tsConfig : []),
-    ...(config?.includes(ConfigOptions.Next) ? nextConfig : []),
-    ...(config?.includes(ConfigOptions.Astro) ? astroConfig : []),
-    ...(config?.includes(ConfigOptions.Expo) ? expoConfig : []),
-    // OptionalOptions
-    ...(optionals?.includes(OptionalOptions.Cspell) ? cspell : []),
-    ...(optionals?.includes(OptionalOptions.Tailwind) ? tailwind : []),
-    ...(optionals?.includes(OptionalOptions.Vitest) ? vitest : []),
-    ...(optionals?.includes(OptionalOptions.I18next) ? i18next : []),
-    ...(optionals?.includes(OptionalOptions.Mdx) ? mdx : [])
-  ] as FlatConfig.ConfigArray
+    ...applyConfigIfOptionPresent(config, ConfigOption.Ts, tsConfig),
+    ...applyConfigIfOptionPresent(config, ConfigOption.Next, nextConfig),
+    ...applyConfigIfOptionPresent(config, ConfigOption.Astro, astroConfig),
+    ...applyConfigIfOptionPresent(config, ConfigOption.Expo, expoConfig),
+    ...(optionals.includes(OptionalOption.Cspell) ? cspell : []),
+    ...(optionals.includes(OptionalOption.Tailwind) ? tailwind : []),
+    ...(optionals.includes(OptionalOption.Vitest) ? vitest : []),
+    ...(optionals.includes(OptionalOption.I18next) ? i18next : []),
+    ...(optionals.includes(OptionalOption.Mdx) ? mdx : [])
+  ]
 }
 
-export { ConfigOptions, eslintConfig, OptionalOptions }
+export { ConfigOption, eslintConfig, OptionalOption }
