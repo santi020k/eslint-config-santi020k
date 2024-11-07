@@ -1,4 +1,5 @@
 name: Releases
+
 on:
   push:
     branches:
@@ -7,20 +8,28 @@ on:
 jobs:
   changelog:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v2
-      - name: Conventional Changelog Action
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Generate Conventional Changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3.7.1
         with:
           github-token: ${{ secrets.PA_TOKEN }}
-          version-file: './package.json,./package-lock.json'
-      - name: create release
-        uses: actions/create-release@v1
+          version-file: |
+            ./package.json
+            ./package-lock.json
+
+      - name: Create GitHub Release
         if: ${{ steps.changelog.outputs.skipped == 'false' }}
+        uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.PA_TOKEN }}
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+          draft: false
+          prerelease: false
