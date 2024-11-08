@@ -1,3 +1,17 @@
+# [3.1.0](https://github.com/santi020k/eslint-config-santi020k/compare/v3.0.0...v3.1.0) (2024-11-08)
+
+
+### Bug Fixes
+
+* **src/optionals/mdx:** fix mdx eslint crash error ([c95993d](https://github.com/santi020k/eslint-config-santi020k/commit/c95993d2f54f75a6e6a90d2b42cda4fb00991cd3))
+
+
+### Features
+
+* **src/optionals/*:** add markdown eslint functionality support ([f8be8b4](https://github.com/santi020k/eslint-config-santi020k/commit/f8be8b4ebd8a8f37eb387596cf8af526cd497ef6))
+
+
+
 # [3.0.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.1.0...v3.0.0) (2024-10-11)
 
 
@@ -57,15 +71,6 @@
 * **src:** The build system changed, so several things may change, serious bug fixes
 * **all:** the way configuration parameters are passed change
 * **all:** Now the library is used in a different way and ts support has been improved
-
-
-
-## [1.2.2](https://github.com/santi020k/eslint-config-santi020k/compare/v1.2.1...v1.2.2) (2024-06-06)
-
-
-### Bug Fixes
-
-* **js/rules.ts:** disable old rules for [@stylistic](https://github.com/stylistic) rules ([91f4ab0](https://github.com/santi020k/eslint-config-santi020k/commit/91f4ab0a7fad1a77ae4bbf2b3f04359e02bce2e0))
 
 
 
