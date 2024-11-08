@@ -123,6 +123,10 @@ Additionally, there are some optional parameters that add support to other techn
         OptionalOption.Vitest,
         // I18next
         OptionalOption.I18next
+        // Mdx
+        OptionalOption.Mdx
+        // Markdown
+        OptionalOption.Markdown
       ]
     }),
     // Your custom config

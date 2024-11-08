@@ -1,9 +1,10 @@
 // @ts-check
-import { ConfigOption, eslintConfig } from './dist/index.js'
+import { ConfigOption, eslintConfig, OptionalOption } from './dist/index.js'
 
 export default [
+  ...eslintConfig({ config: [ConfigOption.Ts], optionals: [OptionalOption.Mdx, OptionalOption.Markdown] }),
   {
-    ignores: ['dist/*']
-  },
-  ...eslintConfig({ config: [ConfigOption.Ts] })
+    name: 'local-config',
+    ignores: ['dist/*', 'CHANGELOG.md']
+  }
 ]
