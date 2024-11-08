@@ -2,11 +2,13 @@ import { applyConfigIfOptionPresent } from 'utils/apply-config-if-option-present
 import { hasReactConfig } from 'utils/has-react-config.ts'
 
 import { astroConfig, expoConfig, jsConfig, nextConfig, reactConfig, tsConfig } from 'configs/index.ts'
-import { cspell, i18next, mdx, tailwind, vitest } from 'optionals/index.ts'
+import { cspell, i18next, markdown, mdx, tailwind, vitest } from 'optionals/index.ts'
 
 import type { TSESLint } from '@typescript-eslint/utils'
 
-// Enum to define configuration options
+/**
+ * Enum for configuration options in ESLint
+ */
 enum ConfigOption {
   Ts = 'ts',
   React = 'react',
@@ -15,16 +17,21 @@ enum ConfigOption {
   Astro = 'astro'
 }
 
-// Enum to define optional features
+/**
+ * Enum for optional features that can be included in ESLint
+ */
 enum OptionalOption {
   Cspell = 'cspell',
   Tailwind = 'tailwind',
   Vitest = 'vitest',
   I18next = 'i18next',
-  Mdx = 'mdx'
+  Mdx = 'mdx',
+  Markdown = 'markdown'
 }
 
-// Array of configurations that involve React
+/**
+ * Array of configurations that require React
+ */
 export const ReactConfigs: ConfigOption[] = [
   ConfigOption.React,
   ConfigOption.Astro,
@@ -32,17 +39,25 @@ export const ReactConfigs: ConfigOption[] = [
   ConfigOption.Expo
 ]
 
-// Interface to define ESLint configuration structure
+/**
+ * ESLint configuration interface
+ */
 interface EslintConfig {
   config?: ConfigOption[]
   optionals?: OptionalOption[]
 }
 
 /**
- * Main function to generate ESLint configuration array.
- * !important: The array order is important, the lower the more important
+ * Generates the ESLint configuration array, applying configurations
+ * and optional settings based on the input configuration.
+ *
+ * @param {EslintConfig} options - Configuration and optional settings
+ * @returns {TSESLint.FlatConfig.ConfigArray} The final ESLint configuration array
  */
-const eslintConfig = ({ config = [], optionals = [] }: EslintConfig = {}): TSESLint.FlatConfig.ConfigArray => {
+const eslintConfig = ({
+  config = [],
+  optionals = []
+}: EslintConfig = {}): TSESLint.FlatConfig.ConfigArray => {
   const hasReact = hasReactConfig(config)
 
   return [
@@ -56,7 +71,8 @@ const eslintConfig = ({ config = [], optionals = [] }: EslintConfig = {}): TSESL
     ...(optionals.includes(OptionalOption.Tailwind) ? tailwind : []),
     ...(optionals.includes(OptionalOption.Vitest) ? vitest : []),
     ...(optionals.includes(OptionalOption.I18next) ? i18next : []),
-    ...(optionals.includes(OptionalOption.Mdx) ? mdx : [])
+    ...(optionals.includes(OptionalOption.Mdx) ? mdx : []),
+    ...(optionals.includes(OptionalOption.Markdown) ? markdown : [])
   ]
 }
 

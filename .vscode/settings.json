@@ -7,7 +7,10 @@
     "javascript",
     "javascriptreact",
     "typescript",
-    "typescriptreact"
+    "typescriptreact",
+    "markdown",
+    "md",
+    "mdx"
   ],
   // required to make the extension pickup the flat config
   "eslint.useFlatConfig": true,
