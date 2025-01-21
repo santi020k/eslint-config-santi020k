@@ -25,7 +25,7 @@ Then, install the configuration package:
 
 ## Usage
 
-Create an `eslint.config.js` file (or use your existing one) and extend @santi020k/eslint-config-santi020k based on your project type:
+Create an eslint.config.js file (or use your existing one) and extend @santi020k/eslint-config-santi020k based on your project type:
 
 ### Basic Usage
 
@@ -122,11 +122,11 @@ Additionally, there are some optional parameters that add support to other techn
         // Vitest and testing-library
         OptionalOption.Vitest,
         // I18next
-        OptionalOption.I18next,
+        OptionalOption.I18next
         // Mdx
-        OptionalOption.Mdx,
+        OptionalOption.Mdx
         // Markdown
-        OptionalOption.Markdown,
+        OptionalOption.Markdown
       ]
     }),
     // Your custom config
