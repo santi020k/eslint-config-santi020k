@@ -3,6 +3,7 @@
 
 ### Bug Fixes
 
+* **package-lock.json:** fix package-lock ([c8d81fa](https://github.com/santi020k/eslint-config-santi020k/commit/c8d81fadbddda73cf45f631da5194ead01a1c0bc))
 * **package.json:** update dependencies, fix some vulnerabilities ([ec837ef](https://github.com/santi020k/eslint-config-santi020k/commit/ec837efdc54c667d6711544b79b6a0c9b5f8848e))
 
 
