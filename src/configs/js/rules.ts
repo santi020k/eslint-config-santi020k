@@ -150,7 +150,9 @@ const rules: TSESLint.Linter.RulesRecord = {
   'no-new': 'warn',
   'prefer-regex-literals': 'warn',
   '@stylistic/multiline-comment-style': 'off',
-  'space-before-function-paren': 'off'
+  'space-before-function-paren': 'off',
+  'operator-linebreak': 'off',
+  '@stylistic/operator-linebreak': ['error', 'after']
 }
 
 export { rules, groups }
