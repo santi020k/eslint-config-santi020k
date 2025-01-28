@@ -1,3 +1,13 @@
+## [3.1.2](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.1...v3.1.2) (2025-01-28)
+
+
+### Bug Fixes
+
+* **src/configs/js/rules.ts:** disable operator-linebreak rule ([ec8ccf1](https://github.com/santi020k/eslint-config-santi020k/commit/ec8ccf1d35599aaede8a2113f14815010dc8fd56))
+* **src/configs/js/rules.ts:** fix operator-linebreak error ([781870d](https://github.com/santi020k/eslint-config-santi020k/commit/781870d2678447850fcef2083e4fb828e8074180))
+
+
+
 ## [3.1.1](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.0...v3.1.1) (2025-01-21)
 
 
@@ -44,15 +54,6 @@
 * **astro:** improve astro with react support ([f99d78b](https://github.com/santi020k/eslint-config-santi020k/commit/f99d78b3fcece3b25b48d4524b67cb91c7b67b75))
 * **mdx.ts:** add Mdx optional support ([effeb66](https://github.com/santi020k/eslint-config-santi020k/commit/effeb66a71def64a7285a07158c4e96fdef1f10c))
 * **vitest.ts:** vitest add assert and should support for expect-expect rule ([0a771bb](https://github.com/santi020k/eslint-config-santi020k/commit/0a771bb2e6a0734277c665c2eb1e356a497f3ab0))
-
-
-
-## [2.0.1](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.0...v2.0.1) (2024-06-24)
-
-
-### Bug Fixes
-
-* **index.config.ts:** add ignore node_modules and .next ([4fba4ba](https://github.com/santi020k/eslint-config-santi020k/commit/4fba4ba8bf0e8f9f719e7842766782fd62f61b30))
 
 
 
