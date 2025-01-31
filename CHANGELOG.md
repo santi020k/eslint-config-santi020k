@@ -1,3 +1,12 @@
+## [3.1.3](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.2...v3.1.3) (2025-01-31)
+
+
+### Bug Fixes
+
+* **package.json:** fix expo dependencie error ([b6fcc71](https://github.com/santi020k/eslint-config-santi020k/commit/b6fcc71d8e2bd8c2a863ddbedbd816667cbb7fa6))
+
+
+
 ## [3.1.2](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.1...v3.1.2) (2025-01-28)
 
 
@@ -43,17 +52,6 @@
 ### BREAKING CHANGES
 
 * **all:** Some import names have been changed and commonjs support has been removed
-
-
-
-# [2.1.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.1...v2.1.0) (2024-06-24)
-
-
-### Features
-
-* **astro:** improve astro with react support ([f99d78b](https://github.com/santi020k/eslint-config-santi020k/commit/f99d78b3fcece3b25b48d4524b67cb91c7b67b75))
-* **mdx.ts:** add Mdx optional support ([effeb66](https://github.com/santi020k/eslint-config-santi020k/commit/effeb66a71def64a7285a07158c4e96fdef1f10c))
-* **vitest.ts:** vitest add assert and should support for expect-expect rule ([0a771bb](https://github.com/santi020k/eslint-config-santi020k/commit/0a771bb2e6a0734277c665c2eb1e356a497f3ab0))
 
 
 
