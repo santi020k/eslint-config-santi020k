@@ -4,41 +4,53 @@ Please fill out all fields below and make sure each item is true and [x] checked
 Otherwise we may not be able to review your PR.
 -->
 
-# Overview
+# Issue number: resolves #
 
-Please include a summary of the change and which issue is fixed. Please also include relevant motivation and context. List any dependencies that are required for this change.
+---------
 
 ## Type of Change
 
 <!-- Put an `x` in all the boxes that apply: -->
 
 - [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 🛠️ Bug fix (non-breaking change which fixes an issue)
+- [ ] 🛠️ Bugfix (non-breaking change which fixes an issue)
 - [ ] ❌ Breaking change (fix or feature that would cause existing functionality to change)
 - [ ] 🧹 Code refactor
 - [ ] ✅ Build configuration change
 - [ ] 📝 Documentation
 - [ ] 🗑️ Chore
 
-## Demo
+<!-- Please do not submit updates to dependencies unless it fixes an issue. -->
 
-If applicable, provide a visual representation of the changes made.
+<!-- Please try to limit your pull request to one type (bugfix, feature, etc). Submit multiple pull requests if needed. -->
 
-## How Has This Been Tested?
+## What is the current behavior?
+<!-- Please describe the current behavior that you are modifying. -->
 
-Please describe the tests that you ran to verify your changes. Provide instructions so we can reproduce. Please also list any relevant details for your test configuration
+## What is the new behavior?
+<!-- Please describe the behavior or changes that are being added by this PR. -->
 
-- Step 1
-- Step 2
-- Step 3
+-
+-
+-
+
+## Does this introduce a breaking change?
+
+- [ ] Yes
+- [ ] No
+
+<!--
+  If this introduces a breaking change:
+  1. Describe the impact and migration path for existing applications below.
+  2. Update the BREAKING.md file with the breaking change.
+  3. Add "BREAKING CHANGE: [...]" to the commit description when merging.
+-->
 
 ## Checklist
 
 - [ ] I have performed a self-review of my own code
 - [ ] I have commented on my code, particularly in areas to understand
 
-# PR Checklist
+## Other information
 
-- [ ] Addresses an existing open issue: fixes #000
-- [ ] That issue was marked as [accepting prs](https://github.com/santi020k/eslint-config-santi020k/issues?q=is%3Aopen+is%3Aissue+label%3A%22accepting+prs%22)
-- [ ] Making a PR
+<!-- Any other information that is important to this PR such as screenshots of how the component looks before and after the change. -->
