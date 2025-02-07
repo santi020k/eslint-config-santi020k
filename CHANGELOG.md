@@ -1,3 +1,12 @@
+## [3.1.4](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.3...v3.1.4) (2025-02-07)
+
+
+### Bug Fixes
+
+* **markdown.ts,mdx.ts:** fix markdown js/ts eslint errors ([08fd089](https://github.com/santi020k/eslint-config-santi020k/commit/08fd089cac6767abf441adfa8633f0ebcf73160d))
+
+
+
 ## [3.1.3](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.2...v3.1.3) (2025-01-31)
 
 
@@ -38,20 +47,6 @@
 ### Features
 
 * **src/optionals/*:** add markdown eslint functionality support ([f8be8b4](https://github.com/santi020k/eslint-config-santi020k/commit/f8be8b4ebd8a8f37eb387596cf8af526cd497ef6))
-
-
-
-# [3.0.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.1.0...v3.0.0) (2024-10-11)
-
-
-### Build System
-
-* **all:** i changed the entire build system to one more optimized for this library ([121587f](https://github.com/santi020k/eslint-config-santi020k/commit/121587f68128c02c1889b1403c3df19127453e98))
-
-
-### BREAKING CHANGES
-
-* **all:** Some import names have been changed and commonjs support has been removed
 
 
 
