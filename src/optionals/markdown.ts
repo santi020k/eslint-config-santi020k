@@ -19,7 +19,13 @@ const markdown = [
       // Disable js/ts Eslint rules, markdown issues
       indent: 'off',
       'no-irregular-whitespace': 'off',
-      '@stylistic/indent': 'off'
+      '@stylistic/indent': 'off',
+      'no-unused-vars': 'off',
+      '@stylistic/jsx-closing-bracket-location': 'off',
+      'no-multi-spaces': 'off',
+      '@stylistic/no-multi-spaces': 'off',
+      'comma-dangle': 'off',
+      '@stylistic/jsx-tag-spacing': 'off'
     }
   }
 ]
