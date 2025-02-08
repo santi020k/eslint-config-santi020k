@@ -1,3 +1,31 @@
+## [3.1.4](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.3...v3.1.4) (2025-02-07)
+
+
+### Bug Fixes
+
+* **markdown.ts,mdx.ts:** fix markdown js/ts eslint errors ([08fd089](https://github.com/santi020k/eslint-config-santi020k/commit/08fd089cac6767abf441adfa8633f0ebcf73160d))
+
+
+
+## [3.1.3](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.2...v3.1.3) (2025-01-31)
+
+
+### Bug Fixes
+
+* **package.json:** fix expo dependencie error ([b6fcc71](https://github.com/santi020k/eslint-config-santi020k/commit/b6fcc71d8e2bd8c2a863ddbedbd816667cbb7fa6))
+
+
+
+## [3.1.2](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.1...v3.1.2) (2025-01-28)
+
+
+### Bug Fixes
+
+* **src/configs/js/rules.ts:** disable operator-linebreak rule ([ec8ccf1](https://github.com/santi020k/eslint-config-santi020k/commit/ec8ccf1d35599aaede8a2113f14815010dc8fd56))
+* **src/configs/js/rules.ts:** fix operator-linebreak error ([781870d](https://github.com/santi020k/eslint-config-santi020k/commit/781870d2678447850fcef2083e4fb828e8074180))
+
+
+
 ## [3.1.1](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.0...v3.1.1) (2025-01-21)
 
 
@@ -19,40 +47,6 @@
 ### Features
 
 * **src/optionals/*:** add markdown eslint functionality support ([f8be8b4](https://github.com/santi020k/eslint-config-santi020k/commit/f8be8b4ebd8a8f37eb387596cf8af526cd497ef6))
-
-
-
-# [3.0.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.1.0...v3.0.0) (2024-10-11)
-
-
-### Build System
-
-* **all:** i changed the entire build system to one more optimized for this library ([121587f](https://github.com/santi020k/eslint-config-santi020k/commit/121587f68128c02c1889b1403c3df19127453e98))
-
-
-### BREAKING CHANGES
-
-* **all:** Some import names have been changed and commonjs support has been removed
-
-
-
-# [2.1.0](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.1...v2.1.0) (2024-06-24)
-
-
-### Features
-
-* **astro:** improve astro with react support ([f99d78b](https://github.com/santi020k/eslint-config-santi020k/commit/f99d78b3fcece3b25b48d4524b67cb91c7b67b75))
-* **mdx.ts:** add Mdx optional support ([effeb66](https://github.com/santi020k/eslint-config-santi020k/commit/effeb66a71def64a7285a07158c4e96fdef1f10c))
-* **vitest.ts:** vitest add assert and should support for expect-expect rule ([0a771bb](https://github.com/santi020k/eslint-config-santi020k/commit/0a771bb2e6a0734277c665c2eb1e356a497f3ab0))
-
-
-
-## [2.0.1](https://github.com/santi020k/eslint-config-santi020k/compare/v2.0.0...v2.0.1) (2024-06-24)
-
-
-### Bug Fixes
-
-* **index.config.ts:** add ignore node_modules and .next ([4fba4ba](https://github.com/santi020k/eslint-config-santi020k/commit/4fba4ba8bf0e8f9f719e7842766782fd62f61b30))
 
 
 
