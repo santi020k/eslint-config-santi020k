@@ -127,7 +127,23 @@ Additionally, there are some optional parameters that add support to other techn
         OptionalOption.Mdx,
         // Markdown
         OptionalOption.Markdown,
+        // Stencil
+        OptionalOption.Stencil
       ]
+    }),
+    // Your custom config
+  ];
+```
+
+### Setting Usage (experimental)
+
+```js
+  import { eslintConfig, SettingOption } from '@santi020k/eslint-config-santi020k';
+
+  export default [
+    ...eslintConfig({
+      // Adds support for .gitignore file, eslint will ignore files in the .gitignore file
+      settings: [SettingOption.Gitignore]
     }),
     // Your custom config
   ];

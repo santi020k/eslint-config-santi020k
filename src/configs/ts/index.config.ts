@@ -12,17 +12,13 @@ const tsConfig = [
     files: ['**/*.{ts,tsx,mts,cts}'],
     rules,
     languageOptions: {
+      parser: tsParser,
       parserOptions: {
-        parser: tsParser
+        project: true
       },
       ecmaVersion: 'latest'
     }
   }
-  // TODO: Temporal
-  // {
-  //   name: 'ignore-node-modules-ts',
-  //   ignores: ['node_modules/*']
-  // }
 ] as TSESLint.FlatConfig.Config[]
 
 export { tsConfig }

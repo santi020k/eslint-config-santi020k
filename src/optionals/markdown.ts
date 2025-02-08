@@ -1,12 +1,10 @@
 import pluginMarkdown from '@eslint/markdown'
 
 const markdown = [
+  ...pluginMarkdown.configs.recommended,
   {
     name: 'markdown',
     files: ['**/*.md'],
-    plugins: {
-      markdown: pluginMarkdown
-    },
     language: 'markdown/commonmark',
     rules: {
       'markdown/fenced-code-language': 'error',

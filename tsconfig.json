@@ -23,6 +23,6 @@
     },
     "allowImportingTsExtensions": true
   },
-  "include": ["src/**/*.ts"],                // Files to include in the compilation process
-  "exclude": ["node_modules", "**/*.test.ts"]// Exclude test files or other unwanted files
+  "include": ["src/**/*.ts", "playground/**/*.ts", "./tsup.config.ts"],                // Files to include in the compilation process
+  "exclude": ["node_modules"]// Exclude test files or other unwanted files
 }

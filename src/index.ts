@@ -2,7 +2,9 @@ import { applyConfigIfOptionPresent } from 'utils/apply-config-if-option-present
 import { hasReactConfig } from 'utils/has-react-config.ts'
 
 import { astroConfig, expoConfig, jsConfig, nextConfig, reactConfig, tsConfig } from 'configs/index.ts'
-import { cspell, i18next, markdown, mdx, tailwind, vitest } from 'optionals/index.ts'
+import { cspell, i18next, markdown, mdx, stencil, tailwind, vitest } from 'optionals/index.ts'
+
+import { gitignore } from './settings/index.ts'
 
 import type { TSESLint } from '@typescript-eslint/utils'
 
@@ -26,7 +28,16 @@ enum OptionalOption {
   Vitest = 'vitest',
   I18next = 'i18next',
   Mdx = 'mdx',
-  Markdown = 'markdown'
+  Markdown = 'markdown',
+  Stencil = 'stencil'
+}
+
+/**
+ * Enum for settings options in ESLint
+ */
+enum SettingOption {
+  Gitignore = 'gitignore'
+  // TODO: Add more settings options
 }
 
 /**
@@ -45,6 +56,7 @@ export const ReactConfigs: ConfigOption[] = [
 interface EslintConfig {
   config?: ConfigOption[]
   optionals?: OptionalOption[]
+  settings?: SettingOption[]
 }
 
 /**
@@ -56,11 +68,13 @@ interface EslintConfig {
  */
 const eslintConfig = ({
   config = [],
-  optionals = []
+  optionals = [],
+  settings = []
 }: EslintConfig = {}): TSESLint.FlatConfig.ConfigArray => {
   const hasReact = hasReactConfig(config)
 
   return [
+    ...(settings.includes(SettingOption.Gitignore) ? gitignore : []),
     ...jsConfig,
     ...(hasReact ? reactConfig : []),
     ...applyConfigIfOptionPresent(config, ConfigOption.Ts, tsConfig),
@@ -71,9 +85,10 @@ const eslintConfig = ({
     ...(optionals.includes(OptionalOption.Tailwind) ? tailwind : []),
     ...(optionals.includes(OptionalOption.Vitest) ? vitest : []),
     ...(optionals.includes(OptionalOption.I18next) ? i18next : []),
+    ...(optionals.includes(OptionalOption.Stencil) ? stencil : []),
     ...(optionals.includes(OptionalOption.Mdx) ? mdx : []),
     ...(optionals.includes(OptionalOption.Markdown) ? markdown : [])
   ]
 }
 
-export { ConfigOption, eslintConfig, OptionalOption }
+export { ConfigOption, eslintConfig, OptionalOption, SettingOption }

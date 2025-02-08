@@ -19,3 +19,5 @@ declare module 'url'
 declare module 'eslint-plugin-tailwindcss'
 
 declare module 'cross-dirname'
+
+declare module '@stencil-community/eslint-plugin'
