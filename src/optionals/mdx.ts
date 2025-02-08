@@ -17,7 +17,15 @@ const mdx = [
     },
     rules: {
       'mdx/remark': 'warn',
-      'react/react-in-jsx-scope': 0
+      'react/react-in-jsx-scope': 0,
+      'no-unused-vars': 'off',
+      '@stylistic/indent': 'off',
+      '@stylistic/jsx-closing-bracket-location': 'off',
+      indent: 'off',
+      'no-multi-spaces': 'off',
+      '@stylistic/no-multi-spaces': 'off',
+      'comma-dangle': 'off',
+      '@stylistic/jsx-tag-spacing': 'off'
     }
   }
 ]
