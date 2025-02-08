@@ -56,12 +56,7 @@ const jsConfig: TSESLint.FlatConfig.ConfigArray = [
     name: 'custom-js',
     languageOptions,
     files: ['**/*.{js,jsx,mjs,cjs}'],
-    ignores: ['node_modules/*'],
     rules
-  },
-  {
-    name: 'ignore-node-modules-js',
-    ignores: ['node_modules/*']
   }
 ]
 
