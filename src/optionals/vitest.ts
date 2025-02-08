@@ -1,15 +1,17 @@
+import testingLibrary from 'eslint-plugin-testing-library'
 import pluginVitest from 'eslint-plugin-vitest'
-import { flatCompat } from 'src/utils/flat-compat.ts'
 
-import { fixupConfigRules } from '@eslint/compat'
+import { fixupPluginRules } from '@eslint/compat'
 
 const vitest = [
-  ...fixupConfigRules(flatCompat.extends('plugin:testing-library/react')),
   {
     name: 'vitest',
-    files: ['tests/**'], // or any other pattern
+    files: ['tests/**', '**/__tests__/**', '**/__mocks__/**', '**/test/**', '**/spec/**', '**/__spec__/**', '**/*.test.{js,ts,jsx,tsx}'], // or any other pattern
     plugins: {
-      vitest: pluginVitest
+      vitest: pluginVitest,
+      'testing-library': fixupPluginRules({
+        rules: testingLibrary.rules
+      })
     },
     rules: {
       ...pluginVitest.configs.recommended.rules, // you can also use vitest.configs.all.rules to enable all rules
