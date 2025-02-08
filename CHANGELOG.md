@@ -1,3 +1,12 @@
+## [3.2.1](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.0...v3.2.1) (2025-02-08)
+
+
+### Bug Fixes
+
+* **mdx.ts:** fix mdx js/ts/tsx rules conflicts ([e6fb97d](https://github.com/santi020k/eslint-config-santi020k/commit/e6fb97d655e22a0f8b5c0ffe85cbffbf0ab77f09))
+
+
+
 # [3.2.0](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.4...v3.2.0) (2025-02-08)
 
 
@@ -41,16 +50,6 @@
 
 * **src/configs/js/rules.ts:** disable operator-linebreak rule ([ec8ccf1](https://github.com/santi020k/eslint-config-santi020k/commit/ec8ccf1d35599aaede8a2113f14815010dc8fd56))
 * **src/configs/js/rules.ts:** fix operator-linebreak error ([781870d](https://github.com/santi020k/eslint-config-santi020k/commit/781870d2678447850fcef2083e4fb828e8074180))
-
-
-
-## [3.1.1](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.0...v3.1.1) (2025-01-21)
-
-
-### Bug Fixes
-
-* **package-lock.json:** fix package-lock ([c8d81fa](https://github.com/santi020k/eslint-config-santi020k/commit/c8d81fadbddda73cf45f631da5194ead01a1c0bc))
-* **package.json:** update dependencies, fix some vulnerabilities ([ec837ef](https://github.com/santi020k/eslint-config-santi020k/commit/ec837efdc54c667d6711544b79b6a0c9b5f8848e))
 
 
 
