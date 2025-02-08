@@ -133,6 +133,20 @@ Additionally, there are some optional parameters that add support to other techn
   ];
 ```
 
+### Setting Usage (experimental)
+
+```js
+  import { eslintConfig, SettingOption } from '@santi020k/eslint-config-santi020k';
+
+  export default [
+    ...eslintConfig({
+      // Adds support for .gitignore file, eslint will ignore files in the .gitignore file
+      settings: [SettingOption.Gitignore]
+    }),
+    // Your custom config
+  ];
+```
+
 ## Opinionated but Flexible
 
 This ESLint configuration is based on my personal preferences and practices. As such, it may evolve over time. I recommend using a fixed version to avoid unexpected changes. If a rule is too strict, consider changing it from an error to a warning to allow for more flexibility during development.
