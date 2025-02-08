@@ -127,6 +127,8 @@ Additionally, there are some optional parameters that add support to other techn
         OptionalOption.Mdx,
         // Markdown
         OptionalOption.Markdown,
+        // Stencil
+        OptionalOption.Stencil
       ]
     }),
     // Your custom config
