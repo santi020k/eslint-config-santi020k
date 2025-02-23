@@ -136,7 +136,7 @@ const rules: TSESLint.Linter.RulesRecord = {
   'no-fallthrough': 'warn',
   eqeqeq: 'warn',
   'no-constant-binary-expression': 'warn',
-  '@stylistic/lines-around-comment': 'warn',
+  '@stylistic/lines-around-comment': ['error', { allowClassStart: true, beforeLineComment: false, allowBlockStart: true }],
   'import/no-duplicates': 'warn',
   'valid-typeof': 'warn',
   'no-constant-condition': 'warn',
