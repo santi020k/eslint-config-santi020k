@@ -1,3 +1,14 @@
+## [3.2.2](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.1...v3.2.2) (2025-02-24)
+
+
+### Bug Fixes
+
+* **js/rules.ts:** fix @stylistic/lines-around-comment rule ([ec688f0](https://github.com/santi020k/eslint-config-santi020k/commit/ec688f046604b7af221a7396d84ff8c9f28e6206))
+* **package.json:** install @stencil-community/eslint-plugin dependencie ([eebd78e](https://github.com/santi020k/eslint-config-santi020k/commit/eebd78e8265b6ed8f741116384b1d6d2e3740331))
+* **package.json:** remove eslint__js dependency ([c715e66](https://github.com/santi020k/eslint-config-santi020k/commit/c715e6602ab9bbe9acca77293363a7a4b4d8aee4))
+
+
+
 ## [3.2.1](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.0...v3.2.1) (2025-02-08)
 
 
@@ -40,16 +51,6 @@
 ### Bug Fixes
 
 * **package.json:** fix expo dependencie error ([b6fcc71](https://github.com/santi020k/eslint-config-santi020k/commit/b6fcc71d8e2bd8c2a863ddbedbd816667cbb7fa6))
-
-
-
-## [3.1.2](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.1...v3.1.2) (2025-01-28)
-
-
-### Bug Fixes
-
-* **src/configs/js/rules.ts:** disable operator-linebreak rule ([ec8ccf1](https://github.com/santi020k/eslint-config-santi020k/commit/ec8ccf1d35599aaede8a2113f14815010dc8fd56))
-* **src/configs/js/rules.ts:** fix operator-linebreak error ([781870d](https://github.com/santi020k/eslint-config-santi020k/commit/781870d2678447850fcef2083e4fb828e8074180))
 
 
 
