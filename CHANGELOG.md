@@ -1,3 +1,12 @@
+## [3.2.3](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.2...v3.2.3) (2025-03-13)
+
+
+### Bug Fixes
+
+* **license:** change the license version to more free one ([e48d0d9](https://github.com/santi020k/eslint-config-santi020k/commit/e48d0d9d24b12dac6f6cc5f29569c6cc2a9579b6))
+
+
+
 ## [3.2.2](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.1...v3.2.2) (2025-02-24)
 
 
@@ -42,15 +51,6 @@
 ### Bug Fixes
 
 * **markdown.ts,mdx.ts:** fix markdown js/ts eslint errors ([08fd089](https://github.com/santi020k/eslint-config-santi020k/commit/08fd089cac6767abf441adfa8633f0ebcf73160d))
-
-
-
-## [3.1.3](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.2...v3.1.3) (2025-01-31)
-
-
-### Bug Fixes
-
-* **package.json:** fix expo dependencie error ([b6fcc71](https://github.com/santi020k/eslint-config-santi020k/commit/b6fcc71d8e2bd8c2a863ddbedbd816667cbb7fa6))
 
 
 
