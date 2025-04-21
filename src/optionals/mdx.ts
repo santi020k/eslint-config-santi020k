@@ -12,7 +12,8 @@ const rules = {
   'no-multi-spaces': 'off',
   '@stylistic/no-multi-spaces': 'off',
   'comma-dangle': 'off',
-  '@stylistic/jsx-tag-spacing': 'off'
+  '@stylistic/jsx-tag-spacing': 'off',
+  'import/export': 'off'
 }
 
 const mdx = [

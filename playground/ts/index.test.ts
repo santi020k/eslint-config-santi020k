@@ -1,4 +1,3 @@
-/* eslint-disable */
 // Function definitions to test various stylistic rules
 const myFunction1 = (): string => {
   const value = 10
@@ -37,9 +36,11 @@ if (typeof count === 'number') {
 }
 
 // Testing unused variables
+// eslint-disable-next-line unused-imports/no-unused-vars, @typescript-eslint/no-unused-vars
 const unusedVar = 'This is unused'
 
 // Function with multiple return statements
+// eslint-disable-next-line unused-imports/no-unused-vars, @typescript-eslint/no-unused-vars
 const complexFunction = (): string => {
   if (count > 10) return 'High'
 
@@ -51,7 +52,8 @@ const complexFunction = (): string => {
 // Testing no-use-before-define
 myDefinedFunction()
 
-function myDefinedFunction (): void {
+// eslint-disable-next-line func-style
+function myDefinedFunction(): void {
   console.log('Function called before definition')
 }
 
