@@ -32,12 +32,12 @@ Create an `eslint.config.js` file (or update your existing one) and extend **@sa
 For a basic JavaScript/Node.js project:
 
 ```js
-import { eslintConfig } from '@santi020k/eslint-config-santi020k';
+import { eslintConfig } from '@santi020k/eslint-config-santi020k'
 
 export default [
-  ...eslintConfig(),
+  ...eslintConfig()
   // Your custom config
-];
+]
 ```
 
 ### Advanced Usage
@@ -45,43 +45,43 @@ export default [
 For projects that require specific configurations (e.g., TypeScript, React, Next.js, ...Etc), use the appropriate options:
 
 ```js
-import { ConfigOption, eslintConfig } from '@santi020k/eslint-config-santi020k';
+import { ConfigOption, eslintConfig } from '@santi020k/eslint-config-santi020k'
 
 // TypeScript project
 export default [
-  ...eslintConfig({ config: [ConfigOption.Ts] }),
+  ...eslintConfig({ config: [ConfigOption.Ts] })
   // Your custom config
-];
+]
 
 // React project
 export default [
-  ...eslintConfig({ config: [ConfigOption.React] }),
+  ...eslintConfig({ config: [ConfigOption.React] })
   // Your custom config
-];
+]
 
 // TypeScript and React project
 export default [
-  ...eslintConfig({ config: [ConfigOption.React, ConfigOption.Ts] }),
+  ...eslintConfig({ config: [ConfigOption.React, ConfigOption.Ts] })
   // Your custom config
-];
+]
 
 // Next.js project
 export default [
-  ...eslintConfig({ config: [ConfigOption.Next] }),
+  ...eslintConfig({ config: [ConfigOption.Next] })
   // Your custom config
-];
+]
 
 // Expo project (Beta)
 export default [
-  ...eslintConfig({ config: [ConfigOption.Expo] }),
+  ...eslintConfig({ config: [ConfigOption.Expo] })
   // Your custom config
-];
+]
 
 // Astro project (beta, supports Astro with React)
 export default [
-  ...eslintConfig({ config: [ConfigOption.Astro] }),
+  ...eslintConfig({ config: [ConfigOption.Astro] })
   // Your custom config
-];
+]
 ```
 
 ### Optional Usage
@@ -89,7 +89,7 @@ export default [
 There are additional optional parameters to add support for other front-end/back-end technologies. This enables you to extend support as needed:
 
 ```js
-import { ConfigOption, eslintConfig, OptionalOption } from '@santi020k/eslint-config-santi020k';
+import { ConfigOption, eslintConfig, OptionalOption } from '@santi020k/eslint-config-santi020k'
 
 export default [
   ...eslintConfig({
@@ -110,9 +110,9 @@ export default [
       // Stencil
       OptionalOption.Stencil
     ]
-  }),
+  })
   // Your custom config
-];
+]
 ```
 
 ### Settings Usage (Experimental)
@@ -120,15 +120,15 @@ export default [
 This experimental option allows ESLint to honor your `.gitignore` file:
 
 ```js
-import { eslintConfig, SettingOption } from '@santi020k/eslint-config-santi020k';
+import { eslintConfig, SettingOption } from '@santi020k/eslint-config-santi020k'
 
 export default [
   ...eslintConfig({
     // ESLint will ignore files specified in .gitignore
     settings: [SettingOption.Gitignore]
-  }),
+  })
   // Your custom config
-];
+]
 ```
 
 ## Opinionated but Flexible

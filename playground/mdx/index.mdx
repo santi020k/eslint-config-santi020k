@@ -1,0 +1,117 @@
+---
+title: "The Ultimate MDX Example"
+description: "A complete overview of MDX capabilities with lorem ipsum content"
+author: "Santiago Ipsum"
+tags: ["mdx", "example", "components"]
+date: "2025-04-21"
+---
+
+import { Button, Alert, FancyBox } from '../components/UI'
+import Note from '../components/Note'
+import Chart from '../components/Chart'
+
+## 🎢 Welcome to the MDX Playground
+
+# Welcome to the MDX Playground 🎢
+
+This is an **MDX** file. It's like Markdown, but on _steroids_ — powered by **JSX**. Let's explore all the features using some _Lorem Ipsum_.
+
+## 🧩 Embedded JSX Components
+
+You can embed React components directly:
+
+<Button onClick={() => alert('Hello!')}>Click Me</Button>
+
+<Alert type="success">This is a success alert using a custom component!</Alert>
+
+## 📦 Importing Components
+
+You can import components like `Note`, `FancyBox`, or even charts.
+
+<Note>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat.
+</Note>
+
+<FancyBox>
+  <h3>Fancy Box Title</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+</FancyBox>
+
+## 🖼️ Images
+
+![Placeholder](https://via.placeholder.com/300x200.png?text=Lorem+Ipsum)
+
+## 🧮 Code Blocks
+
+### JavaScript
+
+```js
+const greet = name => `Hello, ${name}!`
+
+greet('santi020k')
+```
+
+### Bash
+
+```bash
+npm install @mdx-js/react
+```
+
+## 📊 Embedded Dynamic Chart
+
+<Chart
+  title="Sample Chart"
+  data={[{ label: 'A', value: 10 }, { label: 'B', value: 20 }]}
+/>
+
+## 🔗 Links
+
+Check out the [official MDX docs](https://mdxjs.com).
+
+## 🗒️ Lists and Tables
+
+### Bullet List
+
+- Lorem ipsum
+- Dolor sit amet
+- Consectetur adipiscing
+
+### Numbered List
+
+1. First item
+2. Second item
+3. Third item
+
+### Table
+
+| Feature        | Supported |
+|----------------|-----------|
+| Markdown       | ✅        |
+| JSX            | ✅        |
+| Components     | ✅        |
+| Frontmatter    | ✅        |
+
+## 🎉 Inline JSX
+
+Here’s some inline JSX: `<span style={{ color: 'tomato' }}>Hello inline JSX!</span>`
+
+## 📌 Export Metadata
+
+You can also export metadata if needed:
+
+```js
+export const meta = {
+  layout: 'docs',
+  requiresAuth: false
+}
+```
+
+---
+
+## 🧠 Conclusion
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in odio vitae nunc luctus aliquet. MDX is powerful, flexible, and fun. Try it out in your next documentation or blog project!
+
+```
+
+---

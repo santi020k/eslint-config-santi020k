@@ -1,4 +1,3 @@
-/* eslint-disable */
 // test.js
 
 // Function definitions to test various stylistic rules
@@ -12,8 +11,8 @@ const myFunction1 = () => {
   }
 
   const result = value > 5 ? 'High' : 'Low'
-
   const array = [1, 2, 3]
+
   array.forEach(item => {
     console.log(item)
   })
@@ -30,30 +29,33 @@ if (myArray.length > 0) {
   console.log('Array is not empty')
 }
 
-const myFunction2 = param => {
-  return param ? true : false
-}
-
+const myFunction2 = param => !!param
 // Testing invalid typeof comparison
 const count = 0
+
 if (typeof count === 'number') {
   console.log('Count is a number')
 }
 
 // Testing unused variables
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-vars
 const unusedVar = 'This is unused'
 
 // Function with multiple return statements
+// eslint-disable-next-line no-unused-vars, unused-imports/no-unused-vars
 const complexFunction = () => {
   if (count > 10) return 'High'
+
   if (count < 0) return 'Low'
+
   return 'Medium'
 }
 
 // Testing no-use-before-define
 myDefinedFunction()
 
-function myDefinedFunction () {
+// eslint-disable-next-line func-style
+function myDefinedFunction() {
   console.log('Function called before definition')
 }
 
