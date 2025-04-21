@@ -1,3 +1,13 @@
+## [3.2.4](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.3...v3.2.4) (2025-04-21)
+
+
+### Bug Fixes
+
+* **mdx.ts:** fix mdx config after upgrade the library ([b82d55c](https://github.com/santi020k/eslint-config-santi020k/commit/b82d55cc1e66a2f2670b1d4ece946460a45d65fd))
+* **playground/*:** fix other playground configs ([9239b8d](https://github.com/santi020k/eslint-config-santi020k/commit/9239b8de691b41827a954750e417c8ce50e359f7))
+
+
+
 ## [3.2.3](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.2...v3.2.3) (2025-03-13)
 
 
@@ -42,15 +52,6 @@
 * **src/optionals/*:** add optional stenciljs eslint rules support ([c4a437d](https://github.com/santi020k/eslint-config-santi020k/commit/c4a437d717b09d0c20f1169c623a9eebf809cc1a))
 * **src/optionals/*:** improve markdown and mdx settings ([4c4a65d](https://github.com/santi020k/eslint-config-santi020k/commit/4c4a65d07eb84f37ceec5e5402b918c0b37d0c6d))
 * **src/settings/*:** add experimental setting options ([1d8fe4e](https://github.com/santi020k/eslint-config-santi020k/commit/1d8fe4e6096aad4613e8caf72638b4236cbd9fd8))
-
-
-
-## [3.1.4](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.3...v3.1.4) (2025-02-07)
-
-
-### Bug Fixes
-
-* **markdown.ts,mdx.ts:** fix markdown js/ts eslint errors ([08fd089](https://github.com/santi020k/eslint-config-santi020k/commit/08fd089cac6767abf441adfa8633f0ebcf73160d))
 
 
 
