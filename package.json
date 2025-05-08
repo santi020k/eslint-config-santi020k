@@ -53,7 +53,7 @@
   "contributors": [
     "Santiago Molina <info@santi020k.me>"
   ],
-  "license": "Apache License 2.0",
+  "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
