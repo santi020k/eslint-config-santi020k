@@ -1,3 +1,13 @@
+## [3.2.5](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.4...v3.2.5) (2025-05-09)
+
+
+### Bug Fixes
+
+* **package.json:** fix package.json license ([03d71e7](https://github.com/santi020k/eslint-config-santi020k/commit/03d71e7faaa68f9e39a4beadb4a94445375f660c))
+* **package.json:** upgrade dependencies ([0a36d27](https://github.com/santi020k/eslint-config-santi020k/commit/0a36d2795bcc368e6d08e0438f2500a70432f78c))
+
+
+
 ## [3.2.4](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.3...v3.2.4) (2025-04-21)
 
 
@@ -34,24 +44,6 @@
 ### Bug Fixes
 
 * **mdx.ts:** fix mdx js/ts/tsx rules conflicts ([e6fb97d](https://github.com/santi020k/eslint-config-santi020k/commit/e6fb97d655e22a0f8b5c0ffe85cbffbf0ab77f09))
-
-
-
-# [3.2.0](https://github.com/santi020k/eslint-config-santi020k/compare/v3.1.4...v3.2.0) (2025-02-08)
-
-
-### Bug Fixes
-
-* **src/config/js/*:** remove unused code and improve tsparser setup ([2a69de2](https://github.com/santi020k/eslint-config-santi020k/commit/2a69de26644eb45d6be9613b176d76429e4ba7cd))
-* **src/optionals/vitest.ts:** fix testing-library implementation ([a701445](https://github.com/santi020k/eslint-config-santi020k/commit/a701445ca704a628f5eba6d37c59d0770b1873b7))
-* **tsconfig.json:** fix build ([813c8a8](https://github.com/santi020k/eslint-config-santi020k/commit/813c8a860ff50b2d93f7fb30f9c89e44478fd214))
-
-
-### Features
-
-* **src/optionals/*:** add optional stenciljs eslint rules support ([c4a437d](https://github.com/santi020k/eslint-config-santi020k/commit/c4a437d717b09d0c20f1169c623a9eebf809cc1a))
-* **src/optionals/*:** improve markdown and mdx settings ([4c4a65d](https://github.com/santi020k/eslint-config-santi020k/commit/4c4a65d07eb84f37ceec5e5402b918c0b37d0c6d))
-* **src/settings/*:** add experimental setting options ([1d8fe4e](https://github.com/santi020k/eslint-config-santi020k/commit/1d8fe4e6096aad4613e8caf72638b4236cbd9fd8))
 
 
 
