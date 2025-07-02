@@ -1,3 +1,12 @@
+## [3.2.6](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.5...v3.2.6) (2025-07-02)
+
+
+### Bug Fixes
+
+* **package.json:** update dependencies ([a637589](https://github.com/santi020k/eslint-config-santi020k/commit/a637589a26b7f4048b8238bc7b9823486168c721))
+
+
+
 ## [3.2.5](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.4...v3.2.5) (2025-05-09)
 
 
@@ -35,15 +44,6 @@
 * **js/rules.ts:** fix @stylistic/lines-around-comment rule ([ec688f0](https://github.com/santi020k/eslint-config-santi020k/commit/ec688f046604b7af221a7396d84ff8c9f28e6206))
 * **package.json:** install @stencil-community/eslint-plugin dependencie ([eebd78e](https://github.com/santi020k/eslint-config-santi020k/commit/eebd78e8265b6ed8f741116384b1d6d2e3740331))
 * **package.json:** remove eslint__js dependency ([c715e66](https://github.com/santi020k/eslint-config-santi020k/commit/c715e6602ab9bbe9acca77293363a7a4b4d8aee4))
-
-
-
-## [3.2.1](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.0...v3.2.1) (2025-02-08)
-
-
-### Bug Fixes
-
-* **mdx.ts:** fix mdx js/ts/tsx rules conflicts ([e6fb97d](https://github.com/santi020k/eslint-config-santi020k/commit/e6fb97d655e22a0f8b5c0ffe85cbffbf0ab77f09))
 
 
 
