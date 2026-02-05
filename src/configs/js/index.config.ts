@@ -50,7 +50,7 @@ const jsConfig: TSESLint.FlatConfig.ConfigArray = [
   },
   {
     name: 'stylistic',
-    ...pluginStylistic.configs['recommended-flat']
+    ...pluginStylistic.configs.recommended
   },
   {
     name: 'custom-js',

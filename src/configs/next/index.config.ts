@@ -1,12 +1,17 @@
-import { flatCompat } from 'src/utils/flat-compat.ts'
-
 import { rules } from './rules.ts'
 
-import { fixupConfigRules } from '@eslint/compat'
+import pluginNext from '@next/eslint-plugin-next'
 import type { TSESLint } from '@typescript-eslint/utils'
 
 const nextConfig = [
-  ...fixupConfigRules(flatCompat.extends('plugin:@next/next/core-web-vitals')),
+  {
+    plugins: {
+      '@next/next': pluginNext
+    },
+    rules: {
+      ...pluginNext.configs['core-web-vitals'].rules
+    }
+  },
   {
     name: 'custom-next',
     rules
