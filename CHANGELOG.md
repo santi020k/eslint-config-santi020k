@@ -1,3 +1,12 @@
+## [3.2.7](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.6...v3.2.7) (2026-02-05)
+
+
+### Bug Fixes
+
+* Update stylistic plugin configuration from 'recommended-flat' to 'recommended'. ([438bbc8](https://github.com/santi020k/eslint-config-santi020k/commit/438bbc80fee11449ce63b6231e45120bc37efad2))
+
+
+
 ## [3.2.6](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.5...v3.2.6) (2025-07-02)
 
 
@@ -33,17 +42,6 @@
 ### Bug Fixes
 
 * **license:** change the license version to more free one ([e48d0d9](https://github.com/santi020k/eslint-config-santi020k/commit/e48d0d9d24b12dac6f6cc5f29569c6cc2a9579b6))
-
-
-
-## [3.2.2](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.1...v3.2.2) (2025-02-24)
-
-
-### Bug Fixes
-
-* **js/rules.ts:** fix @stylistic/lines-around-comment rule ([ec688f0](https://github.com/santi020k/eslint-config-santi020k/commit/ec688f046604b7af221a7396d84ff8c9f28e6206))
-* **package.json:** install @stencil-community/eslint-plugin dependencie ([eebd78e](https://github.com/santi020k/eslint-config-santi020k/commit/eebd78e8265b6ed8f741116384b1d6d2e3740331))
-* **package.json:** remove eslint__js dependency ([c715e66](https://github.com/santi020k/eslint-config-santi020k/commit/c715e6602ab9bbe9acca77293363a7a4b4d8aee4))
 
 
 
