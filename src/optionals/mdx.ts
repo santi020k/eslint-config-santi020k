@@ -1,6 +1,7 @@
+import type { Linter } from 'eslint'
 import * as pluginMdx from 'eslint-plugin-mdx'
 
-const rules = {
+const rules: Linter.RulesRecord = {
   ...pluginMdx.flatCodeBlocks.rules,
   'no-var': 'error',
   'prefer-const': 'error',
@@ -16,7 +17,7 @@ const rules = {
   'import/export': 'off'
 }
 
-const mdx = [
+const mdx: Linter.Config[] = [
   {
     files: ['**/*.mdx'],
     ...pluginMdx.flat,
