@@ -1,3 +1,12 @@
+## [3.2.8](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.7...v3.2.8) (2026-04-02)
+
+
+### Bug Fixes
+
+* deprecate package and point users to @santi020k/eslint-config-basic ([96fbe9a](https://github.com/santi020k/eslint-config-santi020k/commit/96fbe9a2c6cf99973a9aab8e58b98714886ae12d))
+
+
+
 ## [3.2.7](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.6...v3.2.7) (2026-02-05)
 
 
@@ -33,15 +42,6 @@
 
 * **mdx.ts:** fix mdx config after upgrade the library ([b82d55c](https://github.com/santi020k/eslint-config-santi020k/commit/b82d55cc1e66a2f2670b1d4ece946460a45d65fd))
 * **playground/*:** fix other playground configs ([9239b8d](https://github.com/santi020k/eslint-config-santi020k/commit/9239b8de691b41827a954750e417c8ce50e359f7))
-
-
-
-## [3.2.3](https://github.com/santi020k/eslint-config-santi020k/compare/v3.2.2...v3.2.3) (2025-03-13)
-
-
-### Bug Fixes
-
-* **license:** change the license version to more free one ([e48d0d9](https://github.com/santi020k/eslint-config-santi020k/commit/e48d0d9d24b12dac6f6cc5f29569c6cc2a9579b6))
 
 
 
