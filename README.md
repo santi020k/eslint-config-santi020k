@@ -1,5 +1,16 @@
 # @santi020k/eslint-config-santi020k
 
+> ⚠️ **DEPRECATED** — This package is no longer actively maintained.
+>
+> I have moved all my efforts to a new, more powerful library: **[@santi020k/eslint-config-basic](https://www.npmjs.com/package/@santi020k/eslint-config-basic)**.
+> Version **1.0** is now available and ready to use. Please migrate to the new package for the latest features, improvements, and ongoing support.
+>
+> ```bash
+> npm install @santi020k/eslint-config-basic --save-dev
+> ```
+
+---
+
 Welcome to **@santi020k/eslint-config-santi020k**, a comprehensive and opinionated ESLint configuration package for JavaScript, TypeScript, React, and other frameworks. Born from a desire to eliminate bad practices and ensure high-quality code, this configuration automates code quality checks and reduces cognitive load during code reviews by enforcing a consistent coding style across your projects.
 
 ## Why Use This Configuration?
