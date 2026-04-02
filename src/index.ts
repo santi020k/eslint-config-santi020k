@@ -65,12 +65,20 @@ interface EslintConfig {
  *
  * @param {EslintConfig} options - Configuration and optional settings
  * @returns {TSESLint.FlatConfig.ConfigArray} The final ESLint configuration array
+ * @deprecated This package is deprecated. Please migrate to @santi020k/eslint-config-basic
+ * (https://www.npmjs.com/package/@santi020k/eslint-config-basic), which is more powerful and actively maintained.
  */
 const eslintConfig = ({
   config = [],
   optionals = [],
   settings = []
 }: EslintConfig = {}): TSESLint.FlatConfig.ConfigArray => {
+  console.warn(
+    '[DEPRECATED] @santi020k/eslint-config-santi020k is no longer maintained.\n' +
+    'Please migrate to the new library: @santi020k/eslint-config-basic\n' +
+    'https://www.npmjs.com/package/@santi020k/eslint-config-basic'
+  )
+
   const hasReact = hasReactConfig(config)
 
   return [
