@@ -1,5 +1,7 @@
 # @santi020k/eslint-config-santi020k
 
+> **Repository note:** Historical ESLint flat config package. **New work** lives in [**@santi020k/eslint-config-basic**](https://github.com/santi020k/eslint-config-basic) ([npm](https://www.npmjs.com/package/@santi020k/eslint-config-basic)).
+
 > ⚠️ **DEPRECATED** — This package is no longer actively maintained.
 >
 > I have moved all my efforts to a new, more powerful library: **[@santi020k/eslint-config-basic](https://www.npmjs.com/package/@santi020k/eslint-config-basic)**.
