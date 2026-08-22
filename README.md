@@ -184,7 +184,7 @@ Add the following useful scripts to your `package.json`:
 
 ## Contributing
 
-If you encounter any issues or have suggestions for improvements, please open an issue or submit a pull request on the [GitHub repository](https://github.com/santi020k/eslint-config-santi020k).
+This deprecated package no longer accepts feature work. Please report issues or propose improvements in [@santi020k/eslint-config-basic](https://github.com/santi020k/eslint-config-basic). For a vulnerability in this historical package, follow [SECURITY.md](SECURITY.md).
 
 ## Acknowledgements
 
