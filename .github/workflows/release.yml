@@ -1,9 +1,10 @@
 name: Releases
 
 on:
-  push:
-    branches:
-      - main
+  workflow_call:
+    secrets:
+      PA_TOKEN:
+        required: true
 
 jobs:
   changelog:

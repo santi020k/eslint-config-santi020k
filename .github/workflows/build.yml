@@ -29,3 +29,11 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: npm run pre-commit
+
+  release:
+    # Release side effects require the existing build check on this same commit.
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    uses: ./.github/workflows/release.yml
+    secrets:
+      PA_TOKEN: ${{ secrets.PA_TOKEN }}
